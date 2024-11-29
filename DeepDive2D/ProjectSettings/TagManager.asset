@@ -41,3 +41,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Building
+    uniqueID: 3921032203
+    locked: 0
+  - name: Walls
+    uniqueID: 3890544439
+    locked: 0
+  - name: Plast
+    uniqueID: 3281703737
+    locked: 0

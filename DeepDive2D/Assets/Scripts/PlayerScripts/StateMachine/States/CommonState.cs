@@ -1,18 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class CommonState : MonoBehaviour
+namespace PlayerScripts.StateMachine.States
 {
-    // Start is called before the first frame update
-    void Start()
+    [CreateAssetMenu(menuName = "PlayerStates/Common", fileName = "CommonState")]
+    public class CommonState : PlayerState
     {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

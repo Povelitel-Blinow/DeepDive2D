@@ -1,18 +1,22 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
+using GroundScripts;
+using PlayerScripts;
 using UnityEngine;
 
 public class Root : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private Ground ground;
+    [SerializeField] private Player player;
+    
+    private void Awake()
     {
-        
+        player.Init();
+        ground.Init();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        ground.UpdateGround();
+        player.UpdatePlayer();
     }
 }

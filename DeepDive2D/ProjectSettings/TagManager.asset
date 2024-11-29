@@ -50,3 +50,6 @@ TagManager:
   - name: Plast
     uniqueID: 3281703737
     locked: 0
+  - name: Mine
+    uniqueID: 718578457
+    locked: 0

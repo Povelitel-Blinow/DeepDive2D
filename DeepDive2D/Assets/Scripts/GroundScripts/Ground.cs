@@ -33,7 +33,7 @@ namespace GroundScripts
 
         private void ChangeLevel(int index)
         {
-            index = Mathf.Clamp(index, 0, levels.Length);
+            index = Mathf.Clamp(index, 0, levels.Length-1);
 
             currentIndex = index;
             currentLevel = levels[index];
@@ -53,6 +53,9 @@ namespace GroundScripts
         {
             var nextLevel = GetLevelByIndex(currentIndex + dir);
 
+            if(currentLevel.GetLevelType() == LayerType.UnDugged 
+               && nextLevel.GetLevelType() == LayerType.UnDugged) return;
+            
             if (nextLevel != currentLevel && nextLevel.GetLevelType() != LayerType.CantBeVisited)
             {
                 ChangeLevel(currentIndex + dir);
@@ -61,7 +64,7 @@ namespace GroundScripts
 
         private Level GetLevelByIndex(int index)
         {
-            index = Mathf.Clamp(index, 0, levels.Length);
+            index = Mathf.Clamp(index, 0, levels.Length-1);
             
             return levels[index];
         }

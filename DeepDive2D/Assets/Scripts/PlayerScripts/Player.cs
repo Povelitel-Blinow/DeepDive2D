@@ -36,6 +36,7 @@ namespace PlayerScripts
 
         public void MoveTo(Level targetLevel)
         {
+            Debug.LogWarning(targetLevel.GetLevelType());
             move.MoveTo(targetLevel);
         }
         

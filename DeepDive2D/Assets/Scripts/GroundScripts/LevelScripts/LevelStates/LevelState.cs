@@ -14,10 +14,17 @@ namespace GroundScripts.LevelScripts.LevelStates
 
         public Action<LevelState> ChangeState;
 
-        public abstract void Init();
+        protected LevelControls controls;
+
+        public void Init(LevelControls controls)
+        {
+            this.controls = controls;
+            OnInit();
+        }
+        
+        protected virtual void OnInit(){}
         
         public abstract void Update();
-        
 
         public virtual void OnChange(){}
     }

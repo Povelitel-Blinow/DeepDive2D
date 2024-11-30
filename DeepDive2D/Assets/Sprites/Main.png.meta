@@ -303,6 +303,111 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Lazer
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 896
+        width: 36
+        height: 48
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46edf79e6a6e402468d29f23eb34fb59
+      internalID: -1224216414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FieldLazer
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 896
+        width: 16
+        height: 17
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 981252e660402b249bc6c1bbe6a9ef1c
+      internalID: 2100960888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BearGreen
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 928
+        width: 21
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e46f94d418481b3409c3acd7b846e31b
+      internalID: 313437012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BearBlue
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 880
+        width: 21
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ea148f608515e3498d6f04827dc956e
+      internalID: -1830338600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BearRed
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 976
+        width: 26
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16cf8ee683f26be4ab4560992fd87d65
+      internalID: 1261989917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -315,8 +420,13 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       Bear: -2684102947291226346
+      BearBlue: -1830338600
+      BearGreen: 313437012
+      BearRed: 1261989917
+      FieldLazer: 2100960888
       Floor: 8801126876103537992
       Ground: 1057461262287701629
+      Lazer: -1224216414
       Level0: 2211714010249429090
       Mine: 8117856743858075646
       Plast: 8350362020719645861

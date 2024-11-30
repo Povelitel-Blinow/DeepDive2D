@@ -1,18 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
+using PlayerScripts;
 using UnityEngine;
 
-public class MoveButtonsHandler : MonoBehaviour
+namespace UI.MoveButtons
 {
-    // Start is called before the first frame update
-    void Start()
+    public class MoveButtonsHandler : MonoBehaviour
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        public void Move(int dir)
+        {
+            Player.Instance.MoveVertical(dir);
+        }
     }
 }

@@ -1,4 +1,3 @@
-using System;
 using GroundScripts.LevelScripts;
 using GroundScripts.LevelScripts.LevelStates;
 using PlayerScripts;
@@ -51,14 +50,14 @@ namespace GroundScripts
 
         public void MoveVertical(int dir)
         {
-            var nextLevel = GetLevelByIndex(currentIndex + dir);
+            var nextLevel = GetLevelByIndex(currentIndex - dir);
 
             if(currentLevel.GetLevelType() == LayerType.UnDugged 
                && nextLevel.GetLevelType() == LayerType.UnDugged) return;
             
             if (nextLevel != currentLevel && nextLevel.GetLevelType() != LayerType.CantBeVisited)
             {
-                ChangeLevel(currentIndex + dir);
+                ChangeLevel(currentIndex - dir);
             }
         }
 

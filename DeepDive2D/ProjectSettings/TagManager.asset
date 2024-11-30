@@ -56,3 +56,6 @@ TagManager:
   - name: Mine
     uniqueID: 718578457
     locked: 0
+  - name: Front
+    uniqueID: 417539153
+    locked: 0

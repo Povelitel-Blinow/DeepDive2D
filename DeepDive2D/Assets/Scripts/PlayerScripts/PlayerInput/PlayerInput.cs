@@ -18,10 +18,10 @@ namespace PlayerScripts.PlayerInput
             
             int dir = 0;
             if (Input.GetKeyDown(KeyCode.W))
-                dir -= 1;
+                dir += 1;
 
             if (Input.GetKeyDown(KeyCode.S))
-                dir += 1;
+                dir -= 1;
             
             if(dir == 0) return;
 

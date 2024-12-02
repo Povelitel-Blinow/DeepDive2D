@@ -27,6 +27,7 @@ namespace PlayerScripts
         public void UpdatePlayer()
         {
             input.UpdateInput();
+            stateMachine.UpdateStateMachine();
         }
 
         public void MoveVertical(int dir)
@@ -36,7 +37,6 @@ namespace PlayerScripts
 
         public void MoveTo(Level targetLevel)
         {
-            Debug.LogWarning(targetLevel.GetLevelType());
             move.MoveTo(targetLevel);
         }
         

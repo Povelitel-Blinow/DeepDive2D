@@ -16,7 +16,6 @@ namespace GroundScripts.LevelScripts.LevelStates
         {
             if (controls.plasts.GetLevelIsDugged())
             {
-                Debug.Log("Digged");
                 ChangeState(emptyState);
                 return;
             }

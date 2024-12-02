@@ -9,9 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a52d726bec44b54486d89d78d714160, type: 3}
-  m_Name: UnDuggedLevel
+  m_Script: {fileID: 11500000, guid: 8872c89499dd515469751e6c74b55574, type: 3}
+  m_Name: DiggingState
   m_EditorClassIdentifier: 
-  playerState: {fileID: 11400000, guid: 5120743809a9f124b92d633889b931e3, type: 2}
-  type: 1
-  emptyState: {fileID: 11400000, guid: f785e962228bc3e429235342200a9eda, type: 2}

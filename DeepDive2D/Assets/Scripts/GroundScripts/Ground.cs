@@ -34,10 +34,19 @@ namespace GroundScripts
         {
             index = Mathf.Clamp(index, 0, levels.Length-1);
 
+            if(currentLevel != null)
+                currentLevel.OnLevelStateFinished -= ChangeCurrentLevelState;
+            
             currentIndex = index;
             currentLevel = levels[index];
             Player.Instance.ChangeState(currentLevel.GetPlayerState());
             Player.Instance.MoveTo(currentLevel);
+            currentLevel.OnLevelStateFinished += ChangeCurrentLevelState;
+        }
+
+        private void ChangeCurrentLevelState()
+        {
+            Player.Instance.ChangeState(currentLevel.GetPlayerState());
         }
 
         public void UpdateGround()

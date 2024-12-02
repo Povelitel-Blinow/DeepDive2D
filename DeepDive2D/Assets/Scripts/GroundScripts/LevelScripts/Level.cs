@@ -13,6 +13,7 @@ namespace GroundScripts.LevelScripts
         
         [Header("Settings")]
         [SerializeField] private LevelState defaultState;
+        [SerializeField] private Transform cameraPos;
         
         private LevelState currentState;
 
@@ -20,6 +21,7 @@ namespace GroundScripts.LevelScripts
         
         public LayerType GetLevelType() => currentState.Type;
         public PlayerState GetPlayerState() => currentState.PlayerState;
+        public Transform GetCameraTransform() => cameraPos;
         
         public void Init()
         {

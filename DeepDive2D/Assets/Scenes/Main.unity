@@ -1861,6 +1861,7 @@ Transform:
   m_Children:
   - {fileID: 1124525755}
   - {fileID: 1218706406}
+  - {fileID: 2130169192}
   - {fileID: 1048717448}
   - {fileID: 1094434703}
   - {fileID: 391929090}
@@ -2322,7 +2323,7 @@ Transform:
   m_Children:
   - {fileID: 1387995797}
   - {fileID: 1153132911}
-  m_Father: {fileID: 1048717448}
+  m_Father: {fileID: 1734505849}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2130169193
 MonoBehaviour:
@@ -2588,9 +2589,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7371888363555530746, guid: 2b0af6a61ef8c75418311c55dea91e6a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2124865024}
-    - targetCorrespondingSourceObject: {fileID: 7371888363555530746, guid: 2b0af6a61ef8c75418311c55dea91e6a, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2130169192}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2b0af6a61ef8c75418311c55dea91e6a, type: 3}
 --- !u!114 &5739969625545242573 stripped

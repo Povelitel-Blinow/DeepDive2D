@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 namespace UI.InWorldUI
@@ -23,7 +22,7 @@ namespace UI.InWorldUI
         public void SetRatio(float damageRatio)
         {
             gameObject.SetActive(true);
-            ratio = damageRatio;
+            ratio = Mathf.Clamp01(damageRatio);
         }
     }
 }

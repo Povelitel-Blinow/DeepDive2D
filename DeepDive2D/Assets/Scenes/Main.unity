@@ -1198,7 +1198,7 @@ Transform:
   m_GameObject: {fileID: 981976648}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2299,6 +2299,7 @@ GameObject:
   - component: {fileID: 2130169192}
   - component: {fileID: 2130169193}
   - component: {fileID: 2130169194}
+  - component: {fileID: 2130169195}
   m_Layer: 0
   m_Name: Lazer
   m_TagString: Untagged
@@ -2335,6 +2336,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 524e8d16962e56d4c8c17f70ddb9f9ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  upgrade: {fileID: 2130169195}
   layerMask:
     serializedVersion: 2
     m_Bits: 64
@@ -2447,6 +2449,19 @@ LineRenderer:
   m_UseWorldSpace: 1
   m_Loop: 0
   m_ApplyActiveColorSpace: 1
+--- !u!114 &2130169195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2130169191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0c5deef4e045eb478fbb0a629e8eefe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseDamage: 1
 --- !u!1001 &3147792963697199065
 PrefabInstance:
   m_ObjectHideFlags: 0

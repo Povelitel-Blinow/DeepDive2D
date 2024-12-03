@@ -10,11 +10,14 @@ namespace GroundScripts.LevelScripts.Controls
 
         public bool GetLevelIsDugged() => plasts.Count == 0;
 
-        public void Init()
+        public void Init(int basePlastHealth, float healthIncreaseRatio)
         {
-            foreach (Plast p in plasts)
+            for (int i = 0; i < plasts.Count; i++)
             {
-                p.Deregister += Deregister;
+                Debug.LogWarning(i);
+                int hp = basePlastHealth + Mathf.RoundToInt(i * healthIncreaseRatio * basePlastHealth);
+                plasts[i].Init(hp);
+                plasts[i].Deregister += Deregister;
             }
         }
 

@@ -57,5 +57,6 @@ namespace GroundScripts.LevelScripts
     public class LevelControls
     {
         public PlastsHandler plasts;
+        public LevelSettingsHandler settings;
     }
 }

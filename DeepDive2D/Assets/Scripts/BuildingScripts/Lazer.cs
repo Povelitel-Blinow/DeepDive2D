@@ -1,11 +1,17 @@
+using System;
 using System.Collections;
 using GroundScripts.LevelScripts.Controls.Plasts;
 using UnityEngine;
 
 namespace BuildingScripts
 {
+    [RequireComponent(typeof(LazerUpgrade))]
     public class Lazer : MonoBehaviour
     {
+        [Header("Upgrades")] 
+        [SerializeField] private LazerUpgrade upgrade;
+        
+        [Header("Shooting")]
         [SerializeField] private LayerMask layerMask;
         [SerializeField] private Transform muzzle;
         [SerializeField] private LineRenderer lineRenderer;
@@ -32,7 +38,7 @@ namespace BuildingScripts
                 StopAllCoroutines();
                 StartCoroutine(Lazering(hit.point));
                 
-                plast.DestroyPlast();
+                plast.Damage(upgrade.GetDamage());
             }
         }
 
@@ -50,6 +56,11 @@ namespace BuildingScripts
             }
 
             lineRenderer.enabled = false;
+        }
+
+        private void OnValidate()
+        {
+            upgrade ??= GetComponent<LazerUpgrade>();
         }
     }
 }

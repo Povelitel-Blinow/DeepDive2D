@@ -63,24 +63,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   plasts:
-  - {fileID: 5249055825664122746}
-  - {fileID: 2563102831581493712}
-  - {fileID: 969940301327760123}
-  - {fileID: 302982364187998853}
-  - {fileID: 9014762445013028388}
-  - {fileID: 6048043976723647209}
-  - {fileID: 6375453012687075273}
-  - {fileID: 2499115974090992498}
-  - {fileID: 6392854194708875860}
-  - {fileID: 2743367990700696540}
-  - {fileID: 7773049933257683150}
-  - {fileID: 8700067413076144606}
-  - {fileID: 3311323694993779861}
-  - {fileID: 6856886329120063491}
-  - {fileID: 8457421065588643564}
-  - {fileID: 4665486972130303826}
-  - {fileID: 3222694739783944503}
   - {fileID: 2918288323471212262}
+  - {fileID: 3222694739783944503}
+  - {fileID: 4665486972130303826}
+  - {fileID: 8457421065588643564}
+  - {fileID: 6856886329120063491}
+  - {fileID: 3311323694993779861}
+  - {fileID: 8700067413076144606}
+  - {fileID: 7773049933257683150}
+  - {fileID: 2743367990700696540}
+  - {fileID: 6392854194708875860}
+  - {fileID: 2499115974090992498}
+  - {fileID: 6375453012687075273}
+  - {fileID: 6048043976723647209}
+  - {fileID: 9014762445013028388}
+  - {fileID: 302982364187998853}
+  - {fileID: 969940301327760123}
+  - {fileID: 2563102831581493712}
+  - {fileID: 5249055825664122746}
 --- !u!1 &523099489843044962
 GameObject:
   m_ObjectHideFlags: 0
@@ -178,6 +178,7 @@ GameObject:
   - component: {fileID: 7628176111468503959}
   - component: {fileID: 2510504651869438659}
   - component: {fileID: -6808656624419850459}
+  - component: {fileID: 3375113304464085878}
   m_Layer: 0
   m_Name: GroundLevel
   m_TagString: Untagged
@@ -229,8 +230,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controls:
     plasts: {fileID: 4873218508401837186}
+    settings: {fileID: 3375113304464085878}
   defaultState: {fileID: 11400000, guid: c73ff7691ae2c344bb406ba01f200b4f, type: 2}
   cameraPos: {fileID: 6829709861068856647}
+--- !u!114 &3375113304464085878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2268048315137016020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf2fc5866f706c84399038cd5e6e43c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  basePlastHealth: 2
+  plastHealthIncreaseRatio: 0.5
 --- !u!1 &4524783894893699182
 GameObject:
   m_ObjectHideFlags: 0

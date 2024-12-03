@@ -8,27 +8,39 @@ namespace GroundScripts.LevelScripts.Controls.Plasts
 {
     public class Plast : MonoBehaviour
     {
-        [SerializeField] private int hp;
-
+        [SerializeField] private float destroyDelay = 0.2f;
+        
         [Header("Effects")] 
         [SerializeField] private DamageEffect damageEffect;
         [SerializeField] private float damageEffectSpread;
         [SerializeField] private Transform effectSpawnPos;
         
+        [Header("Health Bar")]
+        [SerializeField] private PlastHealthBar healthBar;
+        
+        [Header("SpiteShaker")]
+        [SerializeField] private SpriteShaker spriteShaker;
+        
+        private int currentHp;
+        private int maxHp;
+        
         public Action<Plast> Deregister;
 
         public void Init(int hp)
         {
-            this.hp = hp;
+            maxHp = hp;
+            currentHp = hp;
         }
         
         public void Damage(int damage)
         {
-            Debug.Log(damage);
+            if(currentHp <= 0) return;
             
             SpawnEffect(damage);
-            hp -= damage;
-            if (hp <= 0)
+            currentHp -= damage;
+            healthBar.SetRatio((float)currentHp/maxHp);
+            spriteShaker.Shake();
+            if (currentHp <= 0)
             {
                 DestroyPlast();
                 return;
@@ -45,8 +57,12 @@ namespace GroundScripts.LevelScripts.Controls.Plasts
         
         private void DestroyPlast()
         {
+            Destroy(gameObject, destroyDelay);
+        }
+
+        private void OnDestroy()
+        {
             Deregister?.Invoke(this);
-            Destroy(gameObject);
         }
     }
 }

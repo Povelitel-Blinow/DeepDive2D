@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5016907448969245227}
   - component: {fileID: 8389786063349602073}
+  - component: {fileID: 6735204741916764511}
   m_Layer: 6
   m_Name: Plast
   m_TagString: Untagged
@@ -86,6 +87,52 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &6735204741916764511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4244108295024631033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c14f8695cadb1a34197af0960a51a2c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  curve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: -0.39999998
+      outSlope: -0.39999998
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.5
+      value: 0.8
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0.39999998
+      outSlope: 0.39999998
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  shakeTime: 0.2
 --- !u!1 &4537104236393863041
 GameObject:
   m_ObjectHideFlags: 0
@@ -150,6 +197,7 @@ Transform:
   m_Children:
   - {fileID: 5016907448969245227}
   - {fileID: 9153788848541421679}
+  - {fileID: 2911349369943109391}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5734045962121522760
@@ -164,10 +212,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d26ab11f2c4457d41811473a9cd6d015, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 0
+  destroyDelay: 0.3
   damageEffect: {fileID: 419608929470042048, guid: 34a2e11ac378bdf4da8d6aaef7adc979, type: 3}
   damageEffectSpread: 2
   effectSpawnPos: {fileID: 9153788848541421679}
+  healthBar: {fileID: 8542089097517409821}
+  spriteShaker: {fileID: 6735204741916764511}
 --- !u!61 &-2172189303641790991
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -214,3 +264,80 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 5, y: 0.8}
   m_EdgeRadius: 0
+--- !u!1001 &4067383910954981635
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 7793916210940880768}
+    m_Modifications:
+    - target: {fileID: 1158956510476793356, guid: ecd28777cd326324b9d09da5683de346, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1158956510476793356, guid: ecd28777cd326324b9d09da5683de346, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.325
+      objectReference: {fileID: 0}
+    - target: {fileID: 1158956510476793356, guid: ecd28777cd326324b9d09da5683de346, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1158956510476793356, guid: ecd28777cd326324b9d09da5683de346, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1158956510476793356, guid: ecd28777cd326324b9d09da5683de346, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1158956510476793356, guid: ecd28777cd326324b9d09da5683de346, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1158956510476793356, guid: ecd28777cd326324b9d09da5683de346, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1158956510476793356, guid: ecd28777cd326324b9d09da5683de346, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1158956510476793356, guid: ecd28777cd326324b9d09da5683de346, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1158956510476793356, guid: ecd28777cd326324b9d09da5683de346, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6752564770779816411, guid: ecd28777cd326324b9d09da5683de346, type: 3}
+      propertyPath: m_Name
+      value: PlastHealthBar
+      objectReference: {fileID: 0}
+    - target: {fileID: 6752564770779816411, guid: ecd28777cd326324b9d09da5683de346, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ecd28777cd326324b9d09da5683de346, type: 3}
+--- !u!4 &2911349369943109391 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1158956510476793356, guid: ecd28777cd326324b9d09da5683de346, type: 3}
+  m_PrefabInstance: {fileID: 4067383910954981635}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8542089097517409821 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5690818040357158686, guid: ecd28777cd326324b9d09da5683de346, type: 3}
+  m_PrefabInstance: {fileID: 4067383910954981635}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b739fd8674704a84c9417e97a156fd92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

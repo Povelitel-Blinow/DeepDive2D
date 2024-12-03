@@ -14,7 +14,6 @@ namespace GroundScripts.LevelScripts.Controls
         {
             for (int i = 0; i < plasts.Count; i++)
             {
-                Debug.LogWarning(i);
                 int hp = basePlastHealth + Mathf.RoundToInt(i * healthIncreaseRatio * basePlastHealth);
                 plasts[i].Init(hp);
                 plasts[i].Deregister += Deregister;

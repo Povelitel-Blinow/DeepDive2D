@@ -59,3 +59,6 @@ TagManager:
   - name: Front
     uniqueID: 417539153
     locked: 0
+  - name: DamageEffect
+    uniqueID: 389983857
+    locked: 0

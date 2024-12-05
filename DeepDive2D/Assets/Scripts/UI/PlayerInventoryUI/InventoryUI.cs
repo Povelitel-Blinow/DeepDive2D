@@ -1,4 +1,5 @@
 using InventoryScripts;
+using TMPro;
 using UnityEngine;
 
 namespace UI.PlayerInventoryUI
@@ -6,29 +7,33 @@ namespace UI.PlayerInventoryUI
     public class InventoryUI : MonoBehaviour
     {
         [SerializeField] private InventorySlot[] slots;
+
+        [Header("Info")] 
+        [SerializeField] private TextMeshProUGUI nameText;
+        [SerializeField] private TextMeshProUGUI descriptionText;
+
+        private InventorySlot currentHighLightedSlot;
         
         public void Init()
         {
+            VoidInfo();
             Inventory.Instance.UpdateInventory += UpdateUI;
             foreach (var slot in slots)
             {
                 slot.VoidSlot();
+                slot.OnClick += ShowInfo;
             }
+        }
+
+        private void VoidInfo()
+        {
+            nameText.text = "";
+            descriptionText.text = "";
         }
 
         private void UpdateUI()
         {
             ShowInventoryLayout(Inventory.Instance.GetInventory());
-        }
-        
-        public void Show(bool state)
-        {
-            if (state)
-            {
-                ShowInventoryLayout(Inventory.Instance.GetInventory());    
-            }
-            
-            gameObject.SetActive(state);
         }
 
         private void ShowInventoryLayout(InventoryItem[] items)
@@ -43,6 +48,25 @@ namespace UI.PlayerInventoryUI
                 {
                     slots[i].VoidSlot();
                 }
+            }
+        }
+        
+        private void ShowInfo(InventorySlot slot)
+        {
+            if (currentHighLightedSlot == slot)
+            {
+                currentHighLightedSlot.DeHighLightSlot();
+                currentHighLightedSlot = null;
+                VoidInfo();
+            }else
+            {
+                if(currentHighLightedSlot != null)
+                    currentHighLightedSlot.DeHighLightSlot();
+                
+                currentHighLightedSlot = slot;
+                currentHighLightedSlot.HighLightSlot();
+                nameText.text = currentHighLightedSlot.Item.Item.name;
+                descriptionText.text = currentHighLightedSlot.Item.Item.type.ToString();
             }
         }
     }

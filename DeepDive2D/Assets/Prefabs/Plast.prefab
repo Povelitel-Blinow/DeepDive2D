@@ -214,6 +214,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   destroyDelay: 0.3
   collider2D: {fileID: -2172189303641790991}
+  OnDamageResourceAdditionBorders: {x: 0, y: 1}
+  OnDestroyResourceAdditionBorders: {x: 0, y: 2}
   damageEffect: {fileID: 419608929470042048, guid: 34a2e11ac378bdf4da8d6aaef7adc979, type: 3}
   damageEffectSpread: 2
   effectSpawnPos: {fileID: 9153788848541421679}

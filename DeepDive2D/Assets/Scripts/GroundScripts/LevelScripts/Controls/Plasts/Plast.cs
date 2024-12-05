@@ -11,6 +11,8 @@ namespace GroundScripts.LevelScripts.Controls.Plasts
     {
         [SerializeField] private float destroyDelay = 0.2f;
         [SerializeField] private Collider2D collider2D;
+        [SerializeField] private Vector2Int OnDamageResourceAdditionBorders;
+        [SerializeField] private Vector2Int OnDestroyResourceAdditionBorders;
         
         [Header("Damage Effect")] 
         [SerializeField] private DamageEffect damageEffect;
@@ -64,7 +66,10 @@ namespace GroundScripts.LevelScripts.Controls.Plasts
 
         private void AddResource()
         {
-            int amount = Random.Range(0, 3);
+            int amount = Random.Range(OnDamageResourceAdditionBorders.x,
+                OnDamageResourceAdditionBorders.y+1);
+            
+            Debug.Log(amount);
             
             if(amount == 0) return;
             
@@ -83,7 +88,8 @@ namespace GroundScripts.LevelScripts.Controls.Plasts
             collider2D.enabled = false;
             spriteShaker.Press(destroyDelay);
             
-            int resourcesAmount = Random.Range(0, 5);
+            int resourcesAmount = Random.Range(OnDestroyResourceAdditionBorders.x,
+                OnDestroyResourceAdditionBorders.y+1);
 
             for (int i = 0; i < resourcesAmount; i++)
             {

@@ -1,3 +1,4 @@
+using UI.PlayerInventoryUI;
 using UnityEngine;
 
 namespace PlayerScripts
@@ -6,12 +7,14 @@ namespace PlayerScripts
     {
         [SerializeField] private GameObject moveUI;
         [SerializeField] private GameObject diggingUI;
+        [SerializeField] private InventoryUI inventoryUI;
 
         public static PlayerUI Instance { get; private set; }
         
         public void Init()
         {
             Instance = this;
+            inventoryUI.Init();
         }
         
         public void SetDiggingUI(bool state)

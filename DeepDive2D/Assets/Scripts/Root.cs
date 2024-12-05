@@ -9,9 +9,11 @@ public class Root : MonoBehaviour
     [SerializeField] private Player player;
     [SerializeField] private Lazer lazer;
     [SerializeField] private PlayerUI playerUI;
+    [SerializeField] private InventoryScripts.Inventory inventory;
     
     private void Awake()
     {
+        inventory.Init();
         playerUI.Init();
         player.Init();
         ground.Init();

@@ -1,4 +1,5 @@
 using System;
+using InventoryScripts;
 using UI.InWorldUI;
 using Unity.Mathematics;
 using UnityEngine;
@@ -20,6 +21,9 @@ namespace GroundScripts.LevelScripts.Controls.Plasts
         
         [Header("SpiteShaker")]
         [SerializeField] private SpriteShaker spriteShaker;
+
+        [Header("Material")] 
+        [SerializeField] private Item item;
         
         private int currentHp;
         private int maxHp;
@@ -40,6 +44,7 @@ namespace GroundScripts.LevelScripts.Controls.Plasts
             currentHp -= damage;
             healthBar.SetRatio((float)currentHp/maxHp);
             spriteShaker.Shake();
+            Inventory.Instance.Add(item);
             if (currentHp <= 0)
             {
                 DestroyPlast();

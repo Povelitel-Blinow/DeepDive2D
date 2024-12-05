@@ -417,7 +417,7 @@ TextureImporter:
         width: 80
         height: 7
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -425,6 +425,48 @@ TextureImporter:
       bones: []
       spriteID: da3cfb2764638a048a7210eda4d6e57b
       internalID: 1984000549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Coal
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 793
+        width: 3
+        height: 3
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d2037854c616da48a5d6b68e5a5f639
+      internalID: 2012412077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Copper
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 793
+        width: 3
+        height: 3
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8435473cc5966a741b8db70a38107e7b
+      internalID: -1466389806
       vertices: []
       indices: 
       edges: []
@@ -444,6 +486,8 @@ TextureImporter:
       BearBlue: -1830338600
       BearGreen: 313437012
       BearRed: 1261989917
+      Coal: 2012412077
+      Copper: -1466389806
       FieldLazer: 2100960888
       Floor: 8801126876103537992
       Ground: 1057461262287701629

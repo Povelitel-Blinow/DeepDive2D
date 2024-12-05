@@ -33,5 +33,25 @@ namespace GroundScripts.LevelScripts.Controls.Plasts
                 yield return new WaitForEndOfFrame();
             }
         }
+
+        public void Press(float time)
+        {
+            StopAllCoroutines();
+            StartCoroutine(Pressing(time));
+        }
+
+        private IEnumerator Pressing(float time)
+        {
+            float timer = 0;
+
+            while (timer < time)
+            {
+                timer += Time.deltaTime;
+                transform.localScale = new Vector3(1, (time-timer)/time, 1);
+                yield return new WaitForEndOfFrame();
+            }
+            
+            transform.localScale = Vector3.zero;
+        }
     }
 }

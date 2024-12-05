@@ -1,19 +1,22 @@
 using System.Collections;
+using InventoryScripts;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace UI.InWorldUI
 {
-    public class DamageEffect : MonoBehaviour
+    public class ResourceAddEffect : MonoBehaviour
     {
         [SerializeField] private float moveSpeed;
         [SerializeField] private float showTime;
-        [SerializeField] private TextMeshProUGUI text;
+        [SerializeField] private Image image;
+        [SerializeField] private TextMeshProUGUI amountText;
         [SerializeField] private AnimationCurve curve;
         
-        public void Init(int damage)
+        public void Init(Item item, int amount)
         {
-            StartCoroutine(Showing(damage));
+            StartCoroutine(Showing(item, amount));
         }
 
         private void Update()
@@ -21,15 +24,16 @@ namespace UI.InWorldUI
             transform.position += (Vector3)Vector2.up * (Time.deltaTime * moveSpeed);
         }
 
-        private IEnumerator Showing(int damage)
+        private IEnumerator Showing(Item item, int amount)
         {
-            text.text = damage.ToString();
+            amountText.text = amount.ToString();
+            image.sprite = item.itemSprite;
             float timer = 0;
 
             while (timer < showTime)
             {
                 float alpha = Mathf.Clamp01(curve.Evaluate(timer / showTime));
-                text.color = new Color(text.color.r, text.color.g, text.color.b, alpha);
+                amountText.color = new Color(amountText.color.r, amountText.color.g, amountText.color.b, alpha);
                 timer += Time.deltaTime;
                 yield return new WaitForEndOfFrame();
             }

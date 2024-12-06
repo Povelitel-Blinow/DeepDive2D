@@ -8,9 +8,7 @@ namespace GroundScripts.LevelScripts.LevelStates
     {
         protected override void OnInit()
         {
-            PlayerUI.Instance.SetDiggingUI(false);
-            PlayerUI.Instance.SetMoveUI(true);
-            PlayerUI.Instance.SetLevel0UI(true);
+            
         }
 
         public override void Update()
@@ -20,7 +18,18 @@ namespace GroundScripts.LevelScripts.LevelStates
 
         public override void OnChange()
         {
+            
+        }
+
+        public override void OnVisit()
+        {
+            PlayerUI.Instance.SetMoveUI(true);
             PlayerUI.Instance.SetLevel0UI(true);
+        }
+
+        public override void OnExit()
+        {
+            PlayerUI.Instance.SetLevel0UI(false);
         }
     }
 }

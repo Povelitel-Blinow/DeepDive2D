@@ -23,6 +23,9 @@ namespace GroundScripts.LevelScripts.LevelStates
         public abstract void Update();
 
         public virtual void OnChange(){}
+
+        public abstract void OnVisit();
+        public abstract void OnExit();
     }
 
     public enum LayerType

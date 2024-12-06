@@ -38,6 +38,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Cargo
+    uniqueID: 758402105
+    locked: 0
   - name: BG
     uniqueID: 1658193177
     locked: 0

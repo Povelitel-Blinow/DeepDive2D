@@ -35,8 +35,12 @@ namespace GroundScripts
         {
             index = Mathf.Clamp(index, 0, levels.Length-1);
             
+            if(currentLevel != null)
+                currentLevel.OnLevelExit();
+            
             currentIndex = index;
             currentLevel = levels[index];
+            currentLevel.OnLevelVisit();
             Player.Instance.MoveTo(currentLevel);
         }
 

@@ -1,3 +1,4 @@
+using PlayerScripts;
 using UnityEngine;
 
 namespace GroundScripts.LevelScripts.LevelStates
@@ -17,9 +18,20 @@ namespace GroundScripts.LevelScripts.LevelStates
         {
             if (controls.plasts.GetLevelIsDugged())
             {
+                PlayerUI.Instance.SetDiggingUI(false);
                 ChangeState(emptyState);
                 return;
             }
+        }
+
+        public override void OnVisit()
+        {
+            PlayerUI.Instance.SetDiggingUI(true);
+        }
+
+        public override void OnExit()
+        {
+            PlayerUI.Instance.SetDiggingUI(false);
         }
     }
 }

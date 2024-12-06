@@ -9,6 +9,15 @@ namespace GroundScripts.LevelScripts.LevelStates
         {
 
         }
-        
+
+        public override void OnVisit()
+        {
+            
+        }
+
+        public override void OnExit()
+        {
+            
+        }
     }
 }

@@ -69,8 +69,6 @@ namespace GroundScripts.LevelScripts.Controls.Plasts
             int amount = Random.Range(OnDamageResourceAdditionBorders.x,
                 OnDamageResourceAdditionBorders.y+1);
             
-            Debug.Log(amount);
-            
             if(amount == 0) return;
             
             Item item = posibleResounces[Random.Range(0, posibleResounces.Length)];

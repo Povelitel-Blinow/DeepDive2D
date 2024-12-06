@@ -31,6 +31,16 @@ namespace GroundScripts.LevelScripts
             currentState.Update();
         }
 
+        public void OnLevelVisit()
+        {
+            currentState.OnVisit();
+        }
+        
+        public void OnLevelExit()
+        {
+            currentState.OnExit();
+        }
+
         private void ChangeState(LevelState state)
         {
             bool stateChanged = false;

@@ -22,5 +22,10 @@ namespace PlayerScripts.StateMachine
             currentState = Instantiate(state);
             currentState.Init();
         }
+
+        public void MoveVertical(int direction)
+        {
+            currentState.MoveVertical(direction);
+        }
     }
 }

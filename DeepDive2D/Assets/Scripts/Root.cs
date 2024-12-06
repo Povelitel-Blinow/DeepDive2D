@@ -1,5 +1,7 @@
 using BuildingScripts;
+using CargoShipScripts;
 using GroundScripts;
+using InventoryScripts;
 using PlayerScripts;
 using UnityEngine;
 
@@ -9,7 +11,8 @@ public class Root : MonoBehaviour
     [SerializeField] private Player player;
     [SerializeField] private Lazer lazer;
     [SerializeField] private PlayerUI playerUI;
-    [SerializeField] private InventoryScripts.Inventory inventory;
+    [SerializeField] private Inventory inventory;
+    [SerializeField] private CargoShipHandler cargo;
     
     private void Awake()
     {
@@ -18,6 +21,7 @@ public class Root : MonoBehaviour
         player.Init();
         ground.Init();
         lazer.Init();
+        cargo.Init();
     }
 
     private void Update()

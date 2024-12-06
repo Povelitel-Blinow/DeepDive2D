@@ -32,7 +32,7 @@ namespace PlayerScripts
 
         public void MoveVertical(int dir)
         {
-            Ground.Instance.MoveVertical(dir);
+            stateMachine.MoveVertical(dir);
         }
 
         public void MoveTo(Level targetLevel)

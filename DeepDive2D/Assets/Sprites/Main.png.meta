@@ -480,7 +480,7 @@ TextureImporter:
         width: 9
         height: 6
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -501,7 +501,7 @@ TextureImporter:
         width: 9
         height: 6
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -522,7 +522,7 @@ TextureImporter:
         width: 9
         height: 6
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -543,7 +543,7 @@ TextureImporter:
         width: 9
         height: 6
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -551,6 +551,48 @@ TextureImporter:
       bones: []
       spriteID: ee031a9b1d8c9c84684e5f1da22280bc
       internalID: 2120603603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ship
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 544
+        width: 108
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b3f6a0fcfc1561478acdd917d67dc61
+      internalID: -1404085291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cargo
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 544
+        width: 62
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59137d5897240714aa3d934241524fda
+      internalID: -966873234
       vertices: []
       indices: 
       edges: []
@@ -570,6 +612,7 @@ TextureImporter:
       BearBlue: -1830338600
       BearGreen: 313437012
       BearRed: 1261989917
+      Cargo: -966873234
       Coal: 2012412077
       Copper: -1466389806
       FieldLazer: 2100960888
@@ -584,6 +627,7 @@ TextureImporter:
       Mine: 8117856743858075646
       Pipe: 1984000549
       Plast: 8350362020719645861
+      Ship: -1404085291
       Wall: -1149673380122903276
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0

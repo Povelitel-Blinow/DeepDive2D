@@ -9,6 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04ebe102591cf7649bb9f123155640d7, type: 3}
-  m_Name: CommonState
+  m_Script: {fileID: 11500000, guid: 831bd6037405bc2499b46b3d431c2e3e, type: 3}
+  m_Name: CargoLanding
   m_EditorClassIdentifier: 
+  playerState: {fileID: 0}
+  type: 0

@@ -8,7 +8,6 @@ namespace CargoShipScripts
         [SerializeField] private float landingTime;
         [SerializeField] private float flyAwayTime;
         
-        
         public static CargoShipHandler Instance { get; private set; }
 
         public void Init()

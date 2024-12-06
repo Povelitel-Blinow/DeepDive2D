@@ -26,5 +26,20 @@ namespace PlayerScripts
         {
             moveUI.SetActive(state);
         }
+
+        public void SetCargoLandingUI(bool state)
+        {
+            
+        }
+
+        public void SetCargoStartUpUI(bool state)
+        {
+            
+        }
+
+        public void SetLevel0UI(bool state)
+        {
+            
+        }
     }
 }

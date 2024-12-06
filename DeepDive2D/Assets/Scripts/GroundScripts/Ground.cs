@@ -8,8 +8,9 @@ namespace GroundScripts
     public class Ground : MonoBehaviour
     {
         [SerializeField] private Level[] levels;
-
-        [SerializeField] private int startIndex;
+        
+        [SerializeField] private int level0Index;
+        
         private int currentIndex;
         private Level currentLevel;
         
@@ -19,7 +20,7 @@ namespace GroundScripts
         {
             Instance = this;
             SetupAllLevels();
-            ChangeLevel(startIndex);
+            ChangeLevel(level0Index);
         }
 
         private void SetupAllLevels()
@@ -33,20 +34,10 @@ namespace GroundScripts
         private void ChangeLevel(int index)
         {
             index = Mathf.Clamp(index, 0, levels.Length-1);
-
-            if(currentLevel != null)
-                currentLevel.OnLevelStateFinished -= ChangeCurrentLevelState;
             
             currentIndex = index;
             currentLevel = levels[index];
-            Player.Instance.ChangeState(currentLevel.GetPlayerState());
             Player.Instance.MoveTo(currentLevel);
-            currentLevel.OnLevelStateFinished += ChangeCurrentLevelState;
-        }
-
-        private void ChangeCurrentLevelState()
-        {
-            Player.Instance.ChangeState(currentLevel.GetPlayerState());
         }
 
         public void UpdateGround()
@@ -56,7 +47,7 @@ namespace GroundScripts
                 l.UpdateLevel();
             }
         }
-
+        
         public void MoveVertical(int dir)
         {
             var nextLevel = GetLevelByIndex(currentIndex - dir);
@@ -69,7 +60,7 @@ namespace GroundScripts
                 ChangeLevel(currentIndex - dir);
             }
         }
-
+        
         private Level GetLevelByIndex(int index)
         {
             index = Mathf.Clamp(index, 0, levels.Length-1);

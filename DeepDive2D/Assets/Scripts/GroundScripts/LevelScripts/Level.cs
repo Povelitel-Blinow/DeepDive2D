@@ -1,7 +1,6 @@
 using System;
 using GroundScripts.LevelScripts.Controls;
 using GroundScripts.LevelScripts.LevelStates;
-using PlayerScripts.StateMachine.States;
 using UnityEngine;
 
 namespace GroundScripts.LevelScripts
@@ -20,7 +19,6 @@ namespace GroundScripts.LevelScripts
         public Action OnLevelStateFinished;
         
         public LayerType GetLevelType() => currentState.Type;
-        public PlayerState GetPlayerState() => currentState.PlayerState;
         public Transform GetCameraTransform() => cameraPos;
         
         public void Init()

@@ -2041,7 +2041,7 @@ MonoBehaviour:
   m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
-  m_ApplyToSortingLayers: 0000000037ffe4e70b34b6e939d39ac32905145819a3d42a1905d6625124e31871ae3e17
+  m_ApplyToSortingLayers: 0000000037ffe4e70b34b6e939d39ac32905145819a3d42a1905d6625124e31871ae3e17394c342d
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -5891,8 +5891,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ship: {fileID: 2835540971795113913, guid: 8b5a64c7ad511644886926edd4749602, type: 3}
-  landingTime: 2
-  flyAwayTime: 3
+  landingTime: 7
+  flyAwayTime: 15
 --- !u!1 &2073849602
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,4 +1,5 @@
 using System.Collections;
+using InventoryScripts;
 using UnityEngine;
 
 namespace CargoShipScripts
@@ -10,12 +11,20 @@ namespace CargoShipScripts
         [SerializeField] private float flyAwayTime;
         [SerializeField] private float openTime;
         
+        [Header("ContainerLoading")]
+        [SerializeField] private CargoLoadHandler loader;
+        
         public static CargoShipHandler Instance { get; private set; }
 
         public void Init()
         {
             Instance = this;
+            loader.Init();
         }
+
+        public bool TryAddItem(Item item) => loader.AddItem(item);
+        public float GetCargoRatio() => loader.GetCargoRatio();
+        public void VoidCargo() => loader.VoidCargo();
         
         public void Call()
         {

@@ -224,6 +224,10 @@ MonoBehaviour:
   posibleResounces:
   - {fileID: 11400000, guid: f342bb1af052fcd4ab0b31e4e03c3a24, type: 2}
   - {fileID: 11400000, guid: e8072e897c71f4c43aa4e5d4b32fd9b0, type: 2}
+  - {fileID: 11400000, guid: f986a32dc9fb8794cbc6764eb59a8e30, type: 2}
+  - {fileID: 11400000, guid: c0816ed4977d918448a8397eeb92b81c, type: 2}
+  - {fileID: 11400000, guid: 790e05c246ccaae41bcc9f3b3fc3c9d4, type: 2}
+  - {fileID: 11400000, guid: b889830d122576d4284286a3bc0a03de, type: 2}
   resourceAddEffect: {fileID: 8260212961536506294, guid: 3b54af389130ed74f9e9227ace186f76, type: 3}
 --- !u!61 &-2172189303641790991
 BoxCollider2D:

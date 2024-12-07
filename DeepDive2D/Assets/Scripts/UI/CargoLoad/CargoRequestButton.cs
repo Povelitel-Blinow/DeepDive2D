@@ -2,7 +2,7 @@ using CargoShipScripts;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-namespace UI.CargoRequestButton
+namespace UI.CargoLoad
 {
     public class CargoRequestButton : MonoBehaviour, IPointerClickHandler
     {

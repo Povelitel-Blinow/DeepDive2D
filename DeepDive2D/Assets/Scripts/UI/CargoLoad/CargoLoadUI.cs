@@ -1,14 +1,21 @@
+using System.Collections.Generic;
+using CargoShipScripts;
 using InventoryScripts;
 using TMPro;
+using UI.PlayerInventoryUI;
 using UnityEngine;
 
-namespace UI.PlayerInventoryUI
+namespace UI.CargoLoad
 {
-    public class InventoryUI : MonoBehaviour
+    public class CargoLoadUI : MonoBehaviour
     {
         [SerializeField] private InventorySlot[] slots;
         [SerializeField] private int[] movePositions;
         [SerializeField] private RectTransform moveable;
+
+        [Header("Progress Bars")]
+        [SerializeField] private ProgressBar buttonBar;
+        [SerializeField] private ProgressBar bar;
 
         [Header("Info")] 
         [SerializeField] private TextMeshProUGUI nameText;
@@ -31,8 +38,8 @@ namespace UI.PlayerInventoryUI
 
         private void VoidInfo()
         {
-            nameText.text = "";
-            descriptionText.text = "";
+            nameText.text = "-";
+            descriptionText.text = "Нажмите на ресурс, чтобы посмотреть описание";
         }
 
         private void UpdateUI()
@@ -42,17 +49,29 @@ namespace UI.PlayerInventoryUI
 
         private void ShowInventoryLayout(InventoryItem[] items)
         {
+            List<InventoryItem> checkedItems = new List<InventoryItem>();
+            
+            for (int i = 0; i < items.Length; i++)
+            {
+                if (items[i].Item.type == MaterialType.Meterial ||
+                    items[i].Item.type == MaterialType.Resource) checkedItems.Add(items[i]);
+            }
             
             for (int i = 0; i < slots.Length; i++)
             {
-                if (i < items.Length)
+                if (i < checkedItems.Count)
                 {
-                    slots[i].Show(items[i]);
+                    slots[i].Show(checkedItems[i]);
                 }
                 else
                 {
                     slots[i].VoidSlot();
                 }
+            }
+
+            if (currentHighLightedSlot == null || currentHighLightedSlot.Item == null)
+            {
+                VoidInfo();
             }
         }
         
@@ -80,6 +99,31 @@ namespace UI.PlayerInventoryUI
             currentPosIndex = Mathf.Clamp(currentPosIndex + dir, 0, movePositions.Length-1);
 
             moveable.transform.localPosition = new Vector3(0, movePositions[currentPosIndex], 0);
+        }
+
+        public void AddCurrentMaterial()
+        {
+            if(currentHighLightedSlot == null) return;
+            if(currentHighLightedSlot.Item == null) return;
+
+            if (CargoShipHandler.Instance.TryAddItem(currentHighLightedSlot.Item.Item))
+            {
+                Inventory.Instance.Remove(currentHighLightedSlot.Item.Item);
+                float ratio = CargoShipHandler.Instance.GetCargoRatio();
+                bar.SetRatio(ratio);
+                buttonBar.SetRatio(ratio);
+            }
+        }
+
+        public void TrySend()
+        {
+            if (CargoShipHandler.Instance.GetCargoRatio() >= 1)
+            {
+                CargoShipHandler.Instance.Call();
+                CargoShipHandler.Instance.VoidCargo();
+                bar.SetRatio(0);
+                buttonBar.SetRatio(0);
+            }
         }
     }
 }

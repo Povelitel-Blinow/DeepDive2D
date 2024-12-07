@@ -33,13 +33,30 @@ namespace InventoryScripts
             UpdateInventory?.Invoke();
         }
 
+        public void Remove(Item item, int amount = 1)
+        {
+            foreach (var i in InventoryItems)
+            {
+                if(i.Item.name == item.name)
+                {
+                    i.Amount -= amount;
+
+                    if (i.Amount <= 0)
+                        InventoryItems.Remove(i);
+                    
+                    UpdateInventory?.Invoke();
+                    return;
+                }
+            }
+        }
+
         public InventoryItem[] GetInventory() => InventoryItems.ToArray();
     }
     
     public class InventoryItem
     {
         public Item Item { get; private set; }
-        public int Amount { get; private set; }
+        public int Amount;
 
         public InventoryItem(Item item, int amount)
         {
@@ -47,14 +64,14 @@ namespace InventoryScripts
             Amount = amount;
         }
         
-        public bool IsMatchingType(Item itemToCheck)
+        public bool IsMatchingNames(Item itemToCheck)
         {
-            return Item.type == itemToCheck.type;
+            return Item.name == itemToCheck.name;
         }
 
         public bool TryAdd(Item itemToAdd, int amount)
         {
-            if (IsMatchingType(itemToAdd))
+            if (IsMatchingNames(itemToAdd))
             {
                 Amount += amount;
                 return true;

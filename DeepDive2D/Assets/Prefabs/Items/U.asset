@@ -10,7 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c12577e500663724bbe69d9ca0690d23, type: 3}
-  m_Name: Copper
+  m_Name: U
   m_EditorClassIdentifier: 
-  type: 4
-  itemSprite: {fileID: -1466389806, guid: 2c3f878eadb05d643ab35684ea904db2, type: 3}
+  name: U
+  type: 0
+  itemSprite: {fileID: 1196756976, guid: bdbede44eb8798c47abfc805ae74ec54, type: 3}
+  mass: 1
+  cost: 1

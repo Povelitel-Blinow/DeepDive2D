@@ -11,6 +11,7 @@ namespace UI
         [SerializeField] private AudioClip buttonClick;
         [SerializeField] private AudioClip openCase;
         [SerializeField] private AudioClip plastDestroy;
+        [SerializeField] private AudioClip lazerSound;
 
         public static SoundManager Instance { get; private set; }
         
@@ -32,6 +33,11 @@ namespace UI
         public void PlayPlastDestroy(float volume = 1)
         {
             source.PlayOneShot(plastDestroy, volume);
+        }
+
+        public void PlaySoundLazer(float volume = 1)
+        {
+            source.PlayOneShot(lazerSound, volume);
         }
         
         private void OnValidate()

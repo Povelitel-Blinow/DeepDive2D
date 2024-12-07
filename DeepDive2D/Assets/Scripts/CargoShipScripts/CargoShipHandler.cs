@@ -21,6 +21,9 @@ namespace CargoShipScripts
         [SerializeField] private Item[] stones;
         [SerializeField] private Item defaultStone;
         [SerializeField] private int stoneGetChanceOneOutOf;
+
+        [Header("Sound")] 
+        [SerializeField] private Alarm alarm;
         
         public static CargoShipHandler Instance { get; private set; }
 
@@ -36,6 +39,7 @@ namespace CargoShipScripts
         
         public void Call()
         {
+            alarm.Play();
             CargoShip cargoShip = Instantiate(ship, Vector3.zero, Quaternion.identity);
             cargoShip.Init(landingTime, flyAwayTime);
             cargoShip.OnDrop += OpenCargo;

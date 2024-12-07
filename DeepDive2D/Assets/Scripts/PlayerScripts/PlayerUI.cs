@@ -1,4 +1,5 @@
 using InventoryScripts;
+using UI;
 using UI.CargoLoad;
 using UI.DarUI;
 using UI.PlayerInventoryUI;
@@ -14,6 +15,7 @@ namespace PlayerScripts
         [SerializeField] private GameObject level0UI;
         [SerializeField] private DarUI darUI;
         [SerializeField] private CargoLoadUI cargoLoadUI;
+        [SerializeField] private SoundManager soundManager;
 
         public static PlayerUI Instance { get; private set; }
         
@@ -22,6 +24,7 @@ namespace PlayerScripts
             Instance = this;
             inventoryUI.Init();
             cargoLoadUI.Init();
+            soundManager.Init();
         }
         
         public void SetDiggingUI(bool state)

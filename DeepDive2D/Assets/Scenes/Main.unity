@@ -591,8 +591,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -25}
-  m_SizeDelta: {x: 319.9475, y: 50}
+  m_AnchoredPosition: {x: 0, y: -38.4292}
+  m_SizeDelta: {x: 429.2699, y: 46.3375}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &134252480
 MonoBehaviour:
@@ -614,7 +614,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u0412\u042B \u043F\u043E\u043B\u0443\u0447\u0438\u043B\u0438:"
+  m_text: "\u0413\u0440\u0443\u0437 \u0434\u043E\u0441\u0442\u0430\u0432\u043B\u0435\u043D\n\u0412\u042B
+    \u043F\u043E\u043B\u0443\u0447\u0438\u043B\u0438:"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fe24a43633cbf7543ae742eeb6c37966, type: 2}
   m_sharedMaterial: {fileID: -1426586602695040887, guid: fe24a43633cbf7543ae742eeb6c37966, type: 2}
@@ -649,7 +650,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 16
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 512
+  m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -2465,9 +2466,9 @@ RectTransform:
   - {fileID: 818115091}
   - {fileID: 559181258}
   - {fileID: 1726267173}
-  - {fileID: 1201836119}
   - {fileID: 139947475}
   - {fileID: 478674334}
+  - {fileID: 1201836119}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -9192,7 +9193,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 0.5882353}
-  m_RaycastTarget: 0
+  m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -13730,6 +13731,16 @@ MonoBehaviour:
   flyAwayTime: 15
   openTime: 3
   loader: {fileID: 2020493486}
+  bon: {fileID: 11400000, guid: 837606741a7bf6a43b96ee6d895f4fe0, type: 2}
+  bonAmountRange: {x: 2, y: 10}
+  stones:
+  - {fileID: 11400000, guid: 2a7927bd79baae847b09d3657d014bdc, type: 2}
+  - {fileID: 11400000, guid: 0e2f515b393618b42a8d4da47ecced86, type: 2}
+  - {fileID: 11400000, guid: 8abe334022cf8b44ea7becc136b4a1be, type: 2}
+  - {fileID: 11400000, guid: c73a036a2ad1f9e4499273f6e0ec6a6a, type: 2}
+  - {fileID: 11400000, guid: b15323b4b1691094da0df50cad30d946, type: 2}
+  defaultStone: {fileID: 11400000, guid: 2a09e581b800b5047bd5819f43c242a5, type: 2}
+  stoneGetChanceOneOutOf: 2
 --- !u!114 &2020493486
 MonoBehaviour:
   m_ObjectHideFlags: 0

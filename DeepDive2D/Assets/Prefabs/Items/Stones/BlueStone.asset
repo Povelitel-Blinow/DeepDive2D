@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c12577e500663724bbe69d9ca0690d23, type: 3}
+  m_Name: BlueStone
+  m_EditorClassIdentifier: 
+  name: Blue
+  type: 2
+  itemSprite: {fileID: 2008495857, guid: 2c3f878eadb05d643ab35684ea904db2, type: 3}
+  mass: 1
+  cost: 1

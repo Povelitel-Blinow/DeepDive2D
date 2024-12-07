@@ -1,5 +1,6 @@
 using System.Collections;
 using InventoryScripts;
+using PlayerScripts;
 using UnityEngine;
 
 namespace CargoShipScripts
@@ -13,6 +14,13 @@ namespace CargoShipScripts
         
         [Header("ContainerLoading")]
         [SerializeField] private CargoLoadHandler loader;
+
+        [Header("Cargo")] 
+        [SerializeField] private Item bon;
+        [SerializeField] private Vector2Int bonAmountRange;
+        [SerializeField] private Item[] stones;
+        [SerializeField] private Item defaultStone;
+        [SerializeField] private int stoneGetChanceOneOutOf;
         
         public static CargoShipHandler Instance { get; private set; }
 
@@ -41,8 +49,25 @@ namespace CargoShipScripts
         private IEnumerator Openning(Cargo cargo)
         {
             yield return new WaitForSeconds(openTime);
+
+            var bons = new InventoryItem(bon, Random.Range(bonAmountRange.x, bonAmountRange.y));
+            Inventory.Instance.Add(bon, bons.Amount);
             
-            //PlayerUI.Instance.ShowDarUI();
+            Item stone1 = defaultStone;
+            Item stone2 = defaultStone;
+            if (Random.Range(0, stoneGetChanceOneOutOf) == 0)
+            {
+                stone1 = stones[Random.Range(0, stones.Length)];
+                Inventory.Instance.Add(stone1);
+                
+                if (Random.Range(0, stoneGetChanceOneOutOf) == 0)
+                { 
+                    stone2 = stones[Random.Range(0, stones.Length)];
+                    Inventory.Instance.Add(stone2);
+                }
+            }
+            
+            PlayerUI.Instance.ShowDarUI(bons, stone1, stone2);
             cargo.Delete();
         }
     }

@@ -39,7 +39,7 @@ namespace PlayerScripts
             level0UI.SetActive(state);
         }
 
-        public void ShowDarUI(InventoryItem bon, InventoryItem stone1, InventoryItem stone2) =>
+        public void ShowDarUI(InventoryItem bon, Item stone1, Item stone2) =>
             darUI.Show(bon, stone1, stone2);
     }
 }

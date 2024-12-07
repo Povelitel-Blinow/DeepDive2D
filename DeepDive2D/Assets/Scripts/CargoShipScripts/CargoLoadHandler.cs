@@ -18,10 +18,9 @@ namespace CargoShipScripts
 
         public void NewContainer()
         {
-            currentCargoNumber += 1;
             currentCargoNumber = Mathf.Clamp(currentCargoNumber, 0, neededMasses.Length - 1);
-
             currentContainer = new CargoContainer(neededMasses[currentCargoNumber]);
+            currentCargoNumber += 1;
         }
         
         public bool AddItem(Item item)

@@ -13,15 +13,23 @@ public class Root : MonoBehaviour
     [SerializeField] private PlayerUI playerUI;
     [SerializeField] private Inventory inventory;
     [SerializeField] private CargoShipHandler cargo;
+
+    public static Root Instance { get; private set; }
     
     private void Awake()
     {
-        inventory.Init();
-        playerUI.Init();
-        player.Init();
-        ground.Init();
-        lazer.Init();
-        cargo.Init();
+        if (Instance == null)
+        {
+            Instance = this;
+            inventory.Init();
+            playerUI.Init();
+            player.Init();
+            ground.Init();
+            lazer.Init();
+            cargo.Init();
+            return;
+        }
+        Destroy(gameObject);
     }
 
     private void Update()

@@ -13,6 +13,7 @@ namespace UI.PlayerInventoryUI
         [Header("Info")] 
         [SerializeField] private TextMeshProUGUI nameText;
         [SerializeField] private TextMeshProUGUI descriptionText;
+        [SerializeField] private GameObject emptyText;
 
         private InventorySlot currentHighLightedSlot;
         
@@ -42,6 +43,7 @@ namespace UI.PlayerInventoryUI
 
         private void ShowInventoryLayout(InventoryItem[] items)
         {
+            emptyText.SetActive(items.Length == 0);
             
             for (int i = 0; i < slots.Length; i++)
             {

@@ -20,6 +20,9 @@ namespace UI.CargoLoad
         [Header("Info")] 
         [SerializeField] private TextMeshProUGUI nameText;
         [SerializeField] private TextMeshProUGUI descriptionText;
+        [SerializeField] private GameObject emptyText;
+
+        [SerializeField] private CargoTip tip;
 
         private InventorySlot currentHighLightedSlot;
         
@@ -57,6 +60,8 @@ namespace UI.CargoLoad
                     items[i].Item.type == MaterialType.Resource) checkedItems.Add(items[i]);
             }
             
+            emptyText.SetActive(checkedItems.Count == 0);
+            
             for (int i = 0; i < slots.Length; i++)
             {
                 if (i < checkedItems.Count)
@@ -72,6 +77,11 @@ namespace UI.CargoLoad
             if (currentHighLightedSlot == null || currentHighLightedSlot.Item == null)
             {
                 VoidInfo();
+            }
+            else
+            {
+                nameText.text = currentHighLightedSlot.Item.Item.name;
+                descriptionText.text = currentHighLightedSlot.Item.Item.type.ToString();
             }
         }
         
@@ -123,6 +133,7 @@ namespace UI.CargoLoad
                 CargoShipHandler.Instance.VoidCargo();
                 bar.SetRatio(0);
                 buttonBar.SetRatio(0);
+                tip.Show();
             }
         }
     }

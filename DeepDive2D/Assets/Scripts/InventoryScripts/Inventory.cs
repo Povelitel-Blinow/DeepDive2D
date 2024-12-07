@@ -50,6 +50,34 @@ namespace InventoryScripts
             }
         }
 
+        public int GetBonAmount()
+        {
+            foreach (var i in InventoryItems)
+            {
+                if (i.Item.type == MaterialType.Bon)
+                    return i.Amount;
+            }
+
+            return 0;
+        }
+
+        public void RemoveBon(int amount)
+        {
+            foreach (var i in InventoryItems)
+            {
+                if (i.Item.type == MaterialType.Bon)
+                {
+                    i.Amount -= amount;
+
+                    if (i.Amount <= 0)
+                        InventoryItems.Remove(i);
+                    
+                    UpdateInventory?.Invoke();
+                    return;
+                }
+            }
+        }
+        
         public InventoryItem[] GetInventory() => InventoryItems.ToArray();
     }
     

@@ -7,7 +7,7 @@ namespace GroundScripts.LevelScripts.LevelStates
     public class UnDugged : LevelState
     {
         [Header("States")]
-        [SerializeField] private EmptyState emptyState;
+        [SerializeField] private LevelState nextLevelState;
 
         protected override void OnInit()
         {
@@ -19,7 +19,7 @@ namespace GroundScripts.LevelScripts.LevelStates
             if (controls.plasts.GetLevelIsDugged())
             {
                 PlayerUI.Instance.SetDiggingUI(false);
-                ChangeState(emptyState);
+                ChangeState(nextLevelState);
                 return;
             }
         }

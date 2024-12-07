@@ -9,8 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e3ad8ab2444f0dd4d8cbfd3cd059bcd0, type: 3}
-  m_Name: CargoStartUp
+  m_Script: {fileID: 11500000, guid: efb8d51a81ce4fd499952fe44f684158, type: 3}
+  m_Name: MineState
   m_EditorClassIdentifier: 
-  playerState: {fileID: 0}
   type: 0

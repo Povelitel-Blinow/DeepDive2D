@@ -124,6 +124,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controls:
     plasts: {fileID: 0}
+    settings: {fileID: 0}
+    Level: {fileID: 5363145245270951448}
   defaultState: {fileID: 11400000, guid: f785e962228bc3e429235342200a9eda, type: 2}
   cameraPos: {fileID: 6511456157118862341}
 --- !u!1 &6922295320703375126

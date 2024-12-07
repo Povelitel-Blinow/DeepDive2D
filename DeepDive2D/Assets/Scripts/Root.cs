@@ -13,6 +13,7 @@ public class Root : MonoBehaviour
     [SerializeField] private PlayerUI playerUI;
     [SerializeField] private Inventory inventory;
     [SerializeField] private CargoShipHandler cargo;
+    [SerializeField] private MineBuildHandler mineBuildHandler;
 
     public static Root Instance { get; private set; }
     
@@ -27,6 +28,7 @@ public class Root : MonoBehaviour
             ground.Init();
             lazer.Init();
             cargo.Init();
+            mineBuildHandler.Init();
             return;
         }
         Destroy(gameObject);

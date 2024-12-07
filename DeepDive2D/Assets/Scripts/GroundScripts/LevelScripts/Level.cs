@@ -55,6 +55,7 @@ namespace GroundScripts.LevelScripts
             currentState = Instantiate(state);
             currentState.Init(controls);
             currentState.ChangeState += ChangeState;
+            currentState.OnVisit();
             
             if(stateChanged)
                 OnLevelStateFinished?.Invoke();
@@ -66,5 +67,6 @@ namespace GroundScripts.LevelScripts
     {
         public PlastsHandler plasts;
         public LevelSettingsHandler settings;
+        public Level Level;
     }
 }

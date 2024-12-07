@@ -50,7 +50,7 @@ namespace CargoShipScripts
             
             public bool AddItem(Item item)
             {
-                if (currentMass > neededMass)
+                if (currentMass >= neededMass)
                     return false;
                 
                 currentMass += item.mass;

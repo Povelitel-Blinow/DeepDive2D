@@ -1,7 +1,9 @@
 using InventoryScripts;
 using UI;
+using UI.BonUI;
 using UI.CargoLoad;
 using UI.DarUI;
+using UI.MineUI;
 using UI.PlayerInventoryUI;
 using UnityEngine;
 
@@ -16,6 +18,13 @@ namespace PlayerScripts
         [SerializeField] private DarUI darUI;
         [SerializeField] private CargoLoadUI cargoLoadUI;
         [SerializeField] private SoundManager soundManager;
+        [SerializeField] private BonUI bonUI;
+        
+        [Header("FloorsUI")]
+        [SerializeField] private MineUI mineUI;
+        public MineUI MineUI => mineUI;
+        [SerializeField] private UnbuiltMineUI unbuiltMineUI;
+        public UnbuiltMineUI UnbuiltMineUI => unbuiltMineUI;
 
         public static PlayerUI Instance { get; private set; }
         
@@ -25,6 +34,7 @@ namespace PlayerScripts
             inventoryUI.Init();
             cargoLoadUI.Init();
             soundManager.Init();
+            bonUI.Init();
         }
         
         public void SetDiggingUI(bool state)

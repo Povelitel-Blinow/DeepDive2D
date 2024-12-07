@@ -12,6 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a52d726bec44b54486d89d78d714160, type: 3}
   m_Name: UnDuggedLevel
   m_EditorClassIdentifier: 
-  playerState: {fileID: 11400000, guid: 5120743809a9f124b92d633889b931e3, type: 2}
   type: 1
-  emptyState: {fileID: 11400000, guid: f785e962228bc3e429235342200a9eda, type: 2}
+  nextLevelState: {fileID: 11400000, guid: 22168e38104b21445a79e445a15b79d9, type: 2}

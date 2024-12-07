@@ -2537,6 +2537,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   source: {fileID: 399550862}
   buttonClick: {fileID: 8300000, guid: 404140610fe114c46a1f89d035f9157c, type: 3}
+  openCase: {fileID: 8300000, guid: 575b8935f00fb104bbc5b32b0de5eeb4, type: 3}
+  plastDestroy: {fileID: 8300000, guid: da8476939622c8d4189240e4f37fe5fa, type: 3}
 --- !u!82 &399550862
 AudioSource:
   m_ObjectHideFlags: 0
@@ -6128,7 +6130,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
+          m_IntArgument: -1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -6677,7 +6679,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: -1
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0

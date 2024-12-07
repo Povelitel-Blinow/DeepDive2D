@@ -9,6 +9,8 @@ namespace UI
 
         [Header("Sounds")] 
         [SerializeField] private AudioClip buttonClick;
+        [SerializeField] private AudioClip openCase;
+        [SerializeField] private AudioClip plastDestroy;
 
         public static SoundManager Instance { get; private set; }
         
@@ -20,6 +22,16 @@ namespace UI
         public void PlayButtonClick()
         {
             source.PlayOneShot(buttonClick);    
+        }
+
+        public void PlayCaseOpen(float volume = 1)
+        {
+            source.PlayOneShot(openCase, volume);
+        }
+
+        public void PlayPlastDestroy(float volume = 1)
+        {
+            source.PlayOneShot(plastDestroy, volume);
         }
         
         private void OnValidate()

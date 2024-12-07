@@ -1,5 +1,6 @@
 using System;
 using InventoryScripts;
+using UI;
 using UI.InWorldUI;
 using Unity.Mathematics;
 using UnityEngine;
@@ -10,6 +11,7 @@ namespace GroundScripts.LevelScripts.Controls.Plasts
     public class Plast : MonoBehaviour
     {
         [SerializeField] private float destroyDelay = 0.2f;
+        [SerializeField] private float destroyVolume = 0.2f;
         [SerializeField] private Collider2D collider2D;
         [SerializeField] private Vector2Int OnDamageResourceAdditionBorders;
         [SerializeField] private Vector2Int OnDestroyResourceAdditionBorders;
@@ -83,6 +85,7 @@ namespace GroundScripts.LevelScripts.Controls.Plasts
         
         private void DestroyPlast()
         {
+            SoundManager.Instance.PlayPlastDestroy(destroyVolume);
             collider2D.enabled = false;
             spriteShaker.Press(destroyDelay);
             

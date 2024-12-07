@@ -1,4 +1,5 @@
 using System;
+using UI;
 using UnityEngine;
 
 namespace CargoShipScripts
@@ -8,8 +9,9 @@ namespace CargoShipScripts
     public class Cargo : MonoBehaviour
     {
         [SerializeField] private Rigidbody2D rb;
-        [SerializeField] private AudioClip sound;
+        [SerializeField] private AudioClip collideSound;
         [SerializeField] private AudioSource source;
+        [SerializeField] private float openSoundVolume = 0.5f;
 
         public void Drop()
         {
@@ -19,12 +21,13 @@ namespace CargoShipScripts
 
         public void Delete()
         {
+            SoundManager.Instance.PlayCaseOpen(openSoundVolume);
             Destroy(gameObject);
         }
 
         private void OnCollisionEnter2D(Collision2D other)
         {
-            source.PlayOneShot(sound);
+            source.PlayOneShot(collideSound);
         }
 
         private void OnValidate()

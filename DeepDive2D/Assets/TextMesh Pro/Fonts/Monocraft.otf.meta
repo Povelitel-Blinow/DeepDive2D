@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 3b4a3c2764159a34191792684d1b1e94
+guid: 76492e74cc404e34b9bd3afc2c700f32
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -9,7 +9,7 @@ TrueTypeFontImporter:
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - Bubblez Graffiti
+  - Monocraft
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0

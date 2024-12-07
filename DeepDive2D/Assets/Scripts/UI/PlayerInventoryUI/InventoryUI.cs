@@ -7,12 +7,16 @@ namespace UI.PlayerInventoryUI
     public class InventoryUI : MonoBehaviour
     {
         [SerializeField] private InventorySlot[] slots;
+        [SerializeField] private int[] movePositions;
+        [SerializeField] private RectTransform moveable;
 
         [Header("Info")] 
         [SerializeField] private TextMeshProUGUI nameText;
         [SerializeField] private TextMeshProUGUI descriptionText;
 
         private InventorySlot currentHighLightedSlot;
+        
+        private int currentPosIndex;
         
         public void Init()
         {
@@ -68,6 +72,13 @@ namespace UI.PlayerInventoryUI
                 nameText.text = currentHighLightedSlot.Item.Item.name;
                 descriptionText.text = currentHighLightedSlot.Item.Item.type.ToString();
             }
+        }
+
+        public void MoveVertical(int dir)
+        {
+            currentPosIndex = Mathf.Clamp(currentPosIndex + dir, 0, movePositions.Length-1);
+
+            moveable.transform.localPosition = new Vector3(0, movePositions[currentPosIndex], 0);
         }
     }
 }

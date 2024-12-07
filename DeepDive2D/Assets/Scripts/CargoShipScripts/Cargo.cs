@@ -12,6 +12,11 @@ namespace CargoShipScripts
             transform.parent = null;
             rb.bodyType = RigidbodyType2D.Dynamic;
         }
+
+        public void Delete()
+        {
+            Destroy(gameObject);
+        }
         
         private void OnValidate()
         {

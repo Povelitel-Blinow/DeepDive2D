@@ -1,3 +1,5 @@
+using InventoryScripts;
+using UI.DarUI;
 using UI.PlayerInventoryUI;
 using UnityEngine;
 
@@ -9,6 +11,7 @@ namespace PlayerScripts
         [SerializeField] private GameObject diggingUI;
         [SerializeField] private InventoryUI inventoryUI;
         [SerializeField] private GameObject level0UI;
+        [SerializeField] private DarUI darUI;
 
         public static PlayerUI Instance { get; private set; }
         
@@ -32,5 +35,8 @@ namespace PlayerScripts
         {
             level0UI.SetActive(state);
         }
+
+        public void ShowDarUI(InventoryItem bon, InventoryItem stone1, InventoryItem stone2) =>
+            darUI.Show(bon, stone1, stone2);
     }
 }

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -12,6 +13,8 @@ namespace CargoShipScripts
         
         private const string LandingAnimation = "CargoShipLanding";
         private const string FlyAwayAnimation = "CargoShipFlyAway";
+
+        public Action<Cargo> OnDrop;
         
         public void Init(float landingTime, float flyAwayTime)
         {
@@ -23,6 +26,7 @@ namespace CargoShipScripts
             PlayAnimationTime(LandingAnimation, landingTime);
             yield return new WaitForSeconds(landingTime);
             cargo.Drop();
+            OnDrop?.Invoke(cargo);
             PlayAnimationTime(FlyAwayAnimation, flyAwayTime);
             yield return new WaitForSeconds(flyAwayTime);
             

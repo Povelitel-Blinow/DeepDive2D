@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -8,11 +9,14 @@ namespace UI
     {
         [SerializeField] private Slider slider;
 
+        public static Action OnUpdate;
+        
         public static float volume = 1;
         
         public void Save()
         {
             volume = slider.value;
+            OnUpdate?.Invoke();
         }
 
         public void Show(bool state)

@@ -22,22 +22,22 @@ namespace UI
         
         public void PlayButtonClick()
         {
-            source.PlayOneShot(buttonClick);    
+            source.PlayOneShot(buttonClick, SettingsUI.volume);    
         }
 
         public void PlayCaseOpen(float volume = 1)
         {
-            source.PlayOneShot(openCase, volume);
+            source.PlayOneShot(openCase, volume*SettingsUI.volume);
         }
 
         public void PlayPlastDestroy(float volume = 1)
         {
-            source.PlayOneShot(plastDestroy, volume);
+            source.PlayOneShot(plastDestroy, volume*SettingsUI.volume);
         }
 
         public void PlaySoundLazer(float volume = 1)
         {
-            source.PlayOneShot(lazerSound, volume);
+            source.PlayOneShot(lazerSound, volume*SettingsUI.volume);
         }
         
         private void OnValidate()

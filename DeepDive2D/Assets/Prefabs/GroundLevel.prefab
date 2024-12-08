@@ -265,7 +265,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f342bb1af052fcd4ab0b31e4e03c3a24, type: 2}
   - {fileID: 11400000, guid: e8072e897c71f4c43aa4e5d4b32fd9b0, type: 2}
   miningTime: 2
-  capacity: 10
+  capacity: 40
   mine: {fileID: 6654511579808355727, guid: 06a1ad5e6936aa54ca176affd3523a68, type: 3}
 --- !u!1 &4524783894893699182
 GameObject:

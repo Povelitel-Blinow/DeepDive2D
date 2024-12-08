@@ -31,7 +31,7 @@ namespace GroundScripts.LevelScripts.Controls.Plasts
         [SerializeField] private Item[] posibleResounces;
         [SerializeField] private ResourceAddEffect resourceAddEffect;
         
-        private int currentHp;
+        [SerializeField] private int currentHp;
         private int maxHp;
         
         public Action<Plast> Deregister;

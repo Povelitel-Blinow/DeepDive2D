@@ -14,6 +14,8 @@ namespace BuildingScripts
         
         private List<InventoryItem> minedItems;
 
+        private int mined = 0;
+        
         private float timer = 0;
 
         private bool isBuilt = false;
@@ -40,6 +42,10 @@ namespace BuildingScripts
 
         private void MineItem()
         {
+            if(mined >= capacity) return;
+            
+            mined += 1;
+            
             var item = itemsPossibleToMine[Random.Range(0, itemsPossibleToMine.Length)];
 
             foreach (var i in minedItems)
@@ -61,6 +67,7 @@ namespace BuildingScripts
                 Inventory.Instance.Add(i.Item, i.Amount);
             }
 
+            mined = 0;
             minedItems = new List<InventoryItem>();
         }
 

@@ -11,7 +11,6 @@ namespace InventoryScripts
         
         [Header("Values")]
         public int mass;
-        public int cost;
     }
 
     public enum MaterialType

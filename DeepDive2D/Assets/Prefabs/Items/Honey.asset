@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c12577e500663724bbe69d9ca0690d23, type: 3}
-  m_Name: Pb
+  m_Name: Honey
   m_EditorClassIdentifier: 
-  name: Pb
+  name: Honey
   type: 0
-  itemSprite: {fileID: -841783844, guid: bdbede44eb8798c47abfc805ae74ec54, type: 3}
-  mass: 5
+  itemSprite: {fileID: 899217614, guid: bdbede44eb8798c47abfc805ae74ec54, type: 3}
+  mass: 10

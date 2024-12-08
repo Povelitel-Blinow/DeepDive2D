@@ -15,5 +15,4 @@ MonoBehaviour:
   name: Li
   type: 0
   itemSprite: {fileID: 934553803, guid: bdbede44eb8798c47abfc805ae74ec54, type: 3}
-  mass: 1
-  cost: 1
+  mass: 3

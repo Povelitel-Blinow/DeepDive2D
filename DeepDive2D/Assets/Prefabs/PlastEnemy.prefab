@@ -151,14 +151,13 @@ MonoBehaviour:
   spriteShaker: {fileID: 1183456075943110139}
   posibleResounces:
   - {fileID: 11400000, guid: f342bb1af052fcd4ab0b31e4e03c3a24, type: 2}
-  - {fileID: 11400000, guid: e8072e897c71f4c43aa4e5d4b32fd9b0, type: 2}
+  - {fileID: 11400000, guid: 65a3712dc0564ee4883e16944bb6e22c, type: 2}
   resourceAddEffect: {fileID: 8260212961536506294, guid: 3b54af389130ed74f9e9227ace186f76, type: 3}
   regeneration: 0.2
   regenDelay: 5
   source: {fileID: 490034449799120922}
   volume: 0.5
   scalable: {fileID: 8141634557017763124}
-  scaleTime: 0.5
 --- !u!1 &3678731411347208841
 GameObject:
   m_ObjectHideFlags: 0

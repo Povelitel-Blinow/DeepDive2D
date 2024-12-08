@@ -15,5 +15,4 @@ MonoBehaviour:
   name: U
   type: 0
   itemSprite: {fileID: 1196756976, guid: bdbede44eb8798c47abfc805ae74ec54, type: 3}
-  mass: 1
-  cost: 1
+  mass: 10

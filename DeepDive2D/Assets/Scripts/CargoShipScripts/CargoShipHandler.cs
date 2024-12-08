@@ -1,6 +1,7 @@
 using System.Collections;
 using InventoryScripts;
 using PlayerScripts;
+using UnityEditor;
 using UnityEngine;
 
 namespace CargoShipScripts
@@ -57,18 +58,15 @@ namespace CargoShipScripts
             var bons = new InventoryItem(bon, Random.Range(bonAmountRange.x, bonAmountRange.y));
             Inventory.Instance.Add(bon, bons.Amount);
             
-            Item stone1 = defaultStone;
+            Item stone1 = stones[0];
             Item stone2 = defaultStone;
+
+            Inventory.Instance.Add(stone1);
+            
             if (Random.Range(0, stoneGetChanceOneOutOf) == 0)
-            {
-                stone1 = stones[Random.Range(0, stones.Length)];
-                Inventory.Instance.Add(stone1);
-                
-                if (Random.Range(0, stoneGetChanceOneOutOf) == 0)
-                { 
-                    stone2 = stones[Random.Range(0, stones.Length)];
-                    Inventory.Instance.Add(stone2);
-                }
+            { 
+                stone2 = stones[0];
+                Inventory.Instance.Add(stone2);
             }
             
             PlayerUI.Instance.ShowDarUI(bons, stone1, stone2);

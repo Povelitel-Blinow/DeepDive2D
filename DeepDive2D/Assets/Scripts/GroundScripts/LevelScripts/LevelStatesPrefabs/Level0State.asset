@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4be1088f8fc470a4aab2d93f633de81d, type: 3}
   m_Name: Level0State
   m_EditorClassIdentifier: 
-  playerState: {fileID: 0}
   type: 0
+  blueStone: {fileID: 11400000, guid: 2a7927bd79baae847b09d3657d014bdc, type: 2}

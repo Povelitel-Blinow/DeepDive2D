@@ -58,6 +58,11 @@ namespace BuildingScripts
             lineRenderer.enabled = false;
         }
 
+        public void Upgrade()
+        {
+            upgrade.Upgrade();
+        }
+
         private void OnValidate()
         {
             upgrade ??= GetComponent<LazerUpgrade>();

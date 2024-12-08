@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Yellow
   type: 2
-  itemSprite: {fileID: -1617551166, guid: 2c3f878eadb05d643ab35684ea904db2, type: 3}
+  itemSprite: {fileID: -1718969394, guid: a3760c18250ca2c48baa484a60d3b754, type: 3}
   mass: 1
   cost: 1

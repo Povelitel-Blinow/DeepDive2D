@@ -77,6 +77,19 @@ namespace InventoryScripts
                 }
             }
         }
+
+        public bool HasItemIn(Item item)
+        {
+            foreach (var i in InventoryItems)
+            {
+                if (i.IsMatchingNames(item))
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
         
         public InventoryItem[] GetInventory() => InventoryItems.ToArray();
     }

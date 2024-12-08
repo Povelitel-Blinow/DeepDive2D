@@ -3,6 +3,7 @@ using UI;
 using UI.BonUI;
 using UI.CargoLoad;
 using UI.DarUI;
+using UI.LazerUI;
 using UI.MineUI;
 using UI.PlayerInventoryUI;
 using UnityEngine;
@@ -14,7 +15,6 @@ namespace PlayerScripts
         [SerializeField] private GameObject moveUI;
         [SerializeField] private GameObject diggingUI;
         [SerializeField] private InventoryUI inventoryUI;
-        [SerializeField] private GameObject level0UI;
         [SerializeField] private DarUI darUI;
         [SerializeField] private CargoLoadUI cargoLoadUI;
         [SerializeField] private SoundManager soundManager;
@@ -25,6 +25,8 @@ namespace PlayerScripts
         public MineUI MineUI => mineUI;
         [SerializeField] private UnbuiltMineUI unbuiltMineUI;
         public UnbuiltMineUI UnbuiltMineUI => unbuiltMineUI;
+        [SerializeField] private LazerUI lazerUI;
+        public LazerUI LazerUI => lazerUI;
 
         public static PlayerUI Instance { get; private set; }
         
@@ -45,11 +47,6 @@ namespace PlayerScripts
         public void SetMoveUI(bool state)
         {
             moveUI.SetActive(state);
-        }
-
-        public void SetLevel0UI(bool state)
-        {
-            level0UI.SetActive(state);
         }
 
         public void ShowDarUI(InventoryItem bon, Item stone1, Item stone2) =>

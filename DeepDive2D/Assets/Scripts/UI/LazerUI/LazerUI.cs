@@ -20,5 +20,10 @@ namespace UI.LazerUI
             textGreen.SetActive(state);
             textRed.SetActive(!state);
         }
+
+        public void Show(bool state)
+        {
+            gameObject.SetActive(state);
+        }
     }
 }

@@ -27,6 +27,8 @@ namespace GroundScripts.LevelScripts.Controls
             {
                 plasts.Remove(plast);
             }
+            if(plasts.Count > 0)
+                plasts[0].IsOnTop();
         }
     }
 }

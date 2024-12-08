@@ -9,9 +9,17 @@ namespace GroundScripts.LevelScripts.Controls.Plasts
 
         [SerializeField] private AudioSource source;
         [SerializeField] private float volume;
+
+        [SerializeField] private Transform scalable;
         
         private float timer = 0;
-        
+
+        protected override void OnOpen()
+        {
+            source.volume = volume;
+            scalable.localScale = Vector3.one;
+        }
+
         private void Update()
         {
             timer += Time.deltaTime;
@@ -24,7 +32,7 @@ namespace GroundScripts.LevelScripts.Controls.Plasts
 
         protected override void OnDamage()
         {
-            source.volume = volume;
+            
         }
     }
 }

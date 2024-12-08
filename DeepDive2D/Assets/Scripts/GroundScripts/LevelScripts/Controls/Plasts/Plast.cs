@@ -42,6 +42,13 @@ namespace GroundScripts.LevelScripts.Controls.Plasts
             currentHp = hp;
         }
 
+        public void IsOnTop()
+        {
+            OnOpen();
+        }
+        
+        protected virtual void OnOpen(){}
+
         protected void Heal(float healRatio)
         {
             currentHp += Mathf.RoundToInt(healRatio*maxHp);

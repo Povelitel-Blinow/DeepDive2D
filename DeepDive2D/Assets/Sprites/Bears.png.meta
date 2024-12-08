@@ -160,265 +160,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Bear
+      name: Bears_0
       rect:
         serializedVersion: 2
-        x: 16
-        y: 976
-        width: 19
-        height: 36
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 61f9026279620cad0800000000000000
-      internalID: -2684102947291226346
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Level0
-      rect:
-        serializedVersion: 2
-        x: 800
-        y: 928
-        width: 208
-        height: 80
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2600ca59c2691be10800000000000000
-      internalID: 2211714010249429090
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Ground
-      rect:
-        serializedVersion: 2
-        x: 703
-        y: 928
-        width: 64
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d7605665a6bdcae00800000000000000
-      internalID: 1057461262287701629
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wall
-      rect:
-        serializedVersion: 2
-        x: 656
-        y: 768
-        width: 112
-        height: 144
-      alignment: 5
-      pivot: {x: 1, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 41d3d0ae62a8b00f0800000000000000
-      internalID: -1149673380122903276
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Plast
-      rect:
-        serializedVersion: 2
-        x: 784
-        y: 896
-        width: 80
-        height: 16
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5a458e6040272e370800000000000000
-      internalID: 8350362020719645861
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Mine
-      rect:
-        serializedVersion: 2
-        x: 864
-        y: 848
-        width: 80
-        height: 32
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ef77b23c2bb68a070800000000000000
-      internalID: 8117856743858075646
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Floor
-      rect:
-        serializedVersion: 2
-        x: 864
-        y: 752
-        width: 80
-        height: 80
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8457b417342e32a70800000000000000
-      internalID: 8801126876103537992
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lazer
-      rect:
-        serializedVersion: 2
-        x: 342
-        y: 896
-        width: 36
-        height: 48
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 46edf79e6a6e402468d29f23eb34fb59
-      internalID: -1224216414
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: FieldLazer
-      rect:
-        serializedVersion: 2
-        x: 432
-        y: 896
-        width: 16
-        height: 17
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 981252e660402b249bc6c1bbe6a9ef1c
-      internalID: 2100960888
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BearGreen
-      rect:
-        serializedVersion: 2
-        x: 14
-        y: 928
-        width: 21
+        x: 29
+        y: 952
+        width: 28
         height: 37
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e46f94d418481b3409c3acd7b846e31b
-      internalID: 313437012
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BearBlue
-      rect:
-        serializedVersion: 2
-        x: 14
-        y: 880
-        width: 21
-        height: 37
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3ea148f608515e3498d6f04827dc956e
-      internalID: -1830338600
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BearRed
-      rect:
-        serializedVersion: 2
-        x: 46
-        y: 976
-        width: 26
-        height: 37
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 16cf8ee683f26be4ab4560992fd87d65
-      internalID: 1261989917
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Pipe
-      rect:
-        serializedVersion: 2
-        x: 784
-        y: 881
-        width: 80
-        height: 7
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -426,8 +174,155 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: da3cfb2764638a048a7210eda4d6e57b
-      internalID: 1984000549
+      spriteID: 1f30f70d633fc6e4caa231434bef7a2e
+      internalID: 1107343603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bears_1
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 981
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 780f7fd9788b3714c856caf48c1744a8
+      internalID: 435632872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bears_2
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 952
+        width: 24
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed804f03352535f49b40e18b04dcd1cf
+      internalID: 1550563656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bears_3
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 952
+        width: 24
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e6ad7010c4b7464c9b18f6e892497cf
+      internalID: 677710129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bears_4
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 952
+        width: 24
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2406a812558df314ba8143294f1c3d36
+      internalID: 971893052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bears_5
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 952
+        width: 24
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 021df92b6e562214fb23710cf0b772bb
+      internalID: 966892530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bears_6
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 952
+        width: 24
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e09522b1c397d64d99d4d2fe575d44e
+      internalID: -1766188813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bears_7
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 952
+        width: 18
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e04141a698ce32545b03df1fea860ba2
+      internalID: -703239200
       vertices: []
       indices: 
       edges: []
@@ -443,19 +338,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Bear: -2684102947291226346
-      BearBlue: -1830338600
-      BearGreen: 313437012
-      BearRed: 1261989917
-      FieldLazer: 2100960888
-      Floor: 8801126876103537992
-      Ground: 1057461262287701629
-      Lazer: -1224216414
-      Level0: 2211714010249429090
-      Mine: 8117856743858075646
-      Pipe: 1984000549
-      Plast: 8350362020719645861
-      Wall: -1149673380122903276
+      Bears_0: 1107343603
+      Bears_1: 435632872
+      Bears_2: 1550563656
+      Bears_3: 677710129
+      Bears_4: 971893052
+      Bears_5: 966892530
+      Bears_6: -1766188813
+      Bears_7: -703239200
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

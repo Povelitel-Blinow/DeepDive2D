@@ -1,6 +1,7 @@
 using UI;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 namespace Menu
 {
@@ -9,6 +10,7 @@ namespace Menu
         [SerializeField] private SoundManager soundManager;
         [SerializeField] private MenuError error;
         [SerializeField] private TMP_InputField inputField;
+        [SerializeField] private ApiReader apiReader;
         
         private void Awake()
         {
@@ -22,9 +24,12 @@ namespace Menu
             {
                 error.Show();
                 return;
-                
             }
+
+            SceneManager.LoadScene(1);
             
+            return;
+            apiReader.GetPlayer(playerName);
         }
     }
 }

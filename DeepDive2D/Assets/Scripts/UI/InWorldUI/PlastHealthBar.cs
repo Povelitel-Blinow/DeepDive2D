@@ -21,8 +21,12 @@ namespace UI.InWorldUI
 
         public void SetRatio(float damageRatio)
         {
-            gameObject.SetActive(true);
             ratio = Mathf.Clamp01(damageRatio);
+        }
+
+        public void Show()
+        {
+            gameObject.SetActive(true);
         }
     }
 }

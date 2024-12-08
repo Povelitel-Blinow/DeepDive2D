@@ -175,6 +175,7 @@ GameObject:
   - component: {fileID: 7793916210940880768}
   - component: {fileID: 5734045962121522760}
   - component: {fileID: -2172189303641790991}
+  - component: {fileID: 9033181488679492735}
   m_Layer: 6
   m_Name: Plast
   m_TagString: Untagged
@@ -213,6 +214,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyDelay: 0.3
+  destroyVolume: 0.2
   collider2D: {fileID: -2172189303641790991}
   OnDamageResourceAdditionBorders: {x: 0, y: 1}
   OnDestroyResourceAdditionBorders: {x: 0, y: 2}
@@ -275,6 +277,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 5, y: 0.8}
   m_EdgeRadius: 0
+--- !u!210 &9033181488679492735
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6299498067327214031}
+  m_Enabled: 1
+  m_SortingLayerID: -1013263559
+  m_SortingLayer: 3
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1001 &4067383910954981635
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -41,6 +41,13 @@ namespace GroundScripts.LevelScripts.Controls.Plasts
             maxHp = hp;
             currentHp = hp;
         }
+
+        protected void Heal(float healRatio)
+        {
+            currentHp += Mathf.RoundToInt(healRatio*maxHp);
+            healthBar.SetRatio((float)currentHp/maxHp);
+            currentHp = Mathf.Clamp(currentHp, 0, maxHp);
+        }
         
         public void Damage(int damage)
         {
@@ -50,13 +57,17 @@ namespace GroundScripts.LevelScripts.Controls.Plasts
             AddResource();
             currentHp -= damage;
             healthBar.SetRatio((float)currentHp/maxHp);
+            healthBar.Show();
             spriteShaker.Shake();
             if (currentHp <= 0)
             {
                 DestroyPlast();
                 return;
             }
+            OnDamage();
         }
+
+        protected virtual void OnDamage(){}
 
         private void SpawnEffect(int damage)
         {

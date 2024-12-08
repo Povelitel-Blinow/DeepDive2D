@@ -11,13 +11,18 @@ namespace GroundScripts.LevelScripts.LevelStates
         
         public override void Update()
         {
+            if(isActive == false) return;
             
+            bool isEnought = Inventory.Instance.GetBonAmount() >= MineBuildHandler.Instance.GetPrice();
+            PlayerUI.Instance.UnbuiltUI.SetPrice(MineBuildHandler.Instance.GetPrice(), isEnought);
         }
 
-        public override void OnVisit()
+        protected override void OnVisit()
         {
-            PlayerUI.Instance.UnbuiltMineUI.Show(true);
-            PlayerUI.Instance.UnbuiltMineUI.OnTryBuild += TryBuild;
+            PlayerUI.Instance.UnbuiltUI.Show(true);
+            bool isEnought = Inventory.Instance.GetBonAmount() >= MineBuildHandler.Instance.GetPrice();
+            PlayerUI.Instance.UnbuiltUI.SetPrice(MineBuildHandler.Instance.GetPrice(), isEnought);
+            PlayerUI.Instance.UnbuiltUI.OnTryBuild += TryBuild;
         }
 
         private void TryBuild()
@@ -31,16 +36,16 @@ namespace GroundScripts.LevelScripts.LevelStates
             }
         }
 
-        public override void OnExit()
+        protected override void OnExit()
         {
-            PlayerUI.Instance.UnbuiltMineUI.Show(false);
-            PlayerUI.Instance.UnbuiltMineUI.OnTryBuild -= TryBuild;
+            PlayerUI.Instance.UnbuiltUI.Show(false);
+            PlayerUI.Instance.UnbuiltUI.OnTryBuild -= TryBuild;
         }
 
         public override void OnChange()
         {
-            PlayerUI.Instance.UnbuiltMineUI.Show(false);
-            PlayerUI.Instance.UnbuiltMineUI.OnTryBuild -= TryBuild;
+            PlayerUI.Instance.UnbuiltUI.Show(false);
+            PlayerUI.Instance.UnbuiltUI.OnTryBuild -= TryBuild;
         }
     }
 }

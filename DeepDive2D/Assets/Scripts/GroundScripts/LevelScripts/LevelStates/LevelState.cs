@@ -11,6 +11,7 @@ namespace GroundScripts.LevelScripts.LevelStates
         public Action<LevelState> ChangeState;
 
         protected LevelControls controls;
+        protected bool isActive;
 
         public void Init(LevelControls controls)
         {
@@ -22,10 +23,24 @@ namespace GroundScripts.LevelScripts.LevelStates
         
         public abstract void Update();
 
+        
         public virtual void OnChange(){}
 
-        public abstract void OnVisit();
-        public abstract void OnExit();
+        public void Visit()
+        {
+            isActive = true;
+            OnVisit();    
+        }
+
+        protected virtual void OnVisit(){}
+
+        public void Exit()
+        {
+            isActive = false;
+            OnExit();
+        }
+
+        protected virtual void OnExit(){}
     }
 
     public enum LayerType

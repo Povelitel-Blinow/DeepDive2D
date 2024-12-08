@@ -115,6 +115,11 @@ namespace UI.CargoLoad
         {
             if(currentHighLightedSlot == null) return;
             if(currentHighLightedSlot.Item == null) return;
+            if(currentHighLightedSlot.Item.Item == null)
+            {
+                currentHighLightedSlot = null;
+                return;
+            }
 
             if (CargoShipHandler.Instance.TryAddItem(currentHighLightedSlot.Item.Item))
             {
@@ -122,6 +127,33 @@ namespace UI.CargoLoad
                 float ratio = CargoShipHandler.Instance.GetCargoRatio();
                 bar.SetRatio(ratio);
                 buttonBar.SetRatio(ratio);
+            }
+        }
+
+        public void AddAll()
+        {
+            if(currentHighLightedSlot == null) return;
+            if(currentHighLightedSlot.Item == null) return;
+            if(currentHighLightedSlot.Item.Item == null)
+            {
+                currentHighLightedSlot = null;
+                return;
+            }
+
+            while(CargoShipHandler.Instance.TryAddItem(currentHighLightedSlot.Item.Item))
+            {
+                Inventory.Instance.Remove(currentHighLightedSlot.Item.Item);
+                float ratio = CargoShipHandler.Instance.GetCargoRatio();
+                bar.SetRatio(ratio);
+                buttonBar.SetRatio(ratio);
+                
+                if(currentHighLightedSlot == null) return;
+                if(currentHighLightedSlot.Item == null) return;
+                if(currentHighLightedSlot.Item.Item == null)
+                {
+                    currentHighLightedSlot = null;
+                    return;
+                }
             }
         }
 

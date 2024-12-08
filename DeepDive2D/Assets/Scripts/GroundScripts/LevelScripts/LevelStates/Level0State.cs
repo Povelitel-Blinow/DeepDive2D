@@ -6,20 +6,16 @@ using UnityEngine;
 namespace GroundScripts.LevelScripts.LevelStates
 {
     [CreateAssetMenu(menuName = "LevelStates/Level0State", fileName = "Level0State")]
-    public class Level0State : LevelState
+    public class Level0State : BuildingLevelState
     {
         [SerializeField] private Item blueStone;
         
-        private bool isActive = false;
         private Lazer lazer;
         
         protected override void OnInit()
         {
-            controls.Level.TryGetComponent(out lazer);
-            if (lazer == null)
-            {
-                Debug.LogError($"Level: {controls.Level.name} has no <b>Lazer</b> Component");
-            }
+            lazer = GetComponentInLevel<Lazer>();
+            PlayerUI.Instance.SetDiggingUI(false);
         }
 
         public override void Update()
@@ -34,11 +30,11 @@ namespace GroundScripts.LevelScripts.LevelStates
             PlayerUI.Instance.LazerUI.Show(false);
         }
 
-        public override void OnVisit()
+        protected override void OnVisit()
         {
             PlayerUI.Instance.LazerUI.Show(true);
+            PlayerUI.Instance.SetDiggingUI(false);
             PlayerUI.Instance.SetMoveUI(true);
-            isActive = true;
             PlayerUI.Instance.LazerUI.SetAvalable(Inventory.Instance.HasItemIn(blueStone));
 
             PlayerUI.Instance.LazerUI.OnUpgrade += Upgrade;
@@ -48,16 +44,14 @@ namespace GroundScripts.LevelScripts.LevelStates
         {
             if (Inventory.Instance.HasItemIn(blueStone))
             {
-                Debug.Log(1111);
                 Inventory.Instance.Remove(blueStone);
                 lazer.Upgrade();
             }
         }
-        
-        public override void OnExit()
+
+        protected override void OnExit()
         {
             PlayerUI.Instance.LazerUI.Show(false);
-            isActive = false;
             PlayerUI.Instance.LazerUI.OnUpgrade -= Upgrade;
         }
     }

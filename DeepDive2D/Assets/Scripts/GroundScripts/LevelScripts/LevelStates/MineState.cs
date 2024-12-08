@@ -5,18 +5,14 @@ using UnityEngine;
 namespace GroundScripts.LevelScripts.LevelStates
 {
     [CreateAssetMenu(menuName = "LevelStates/MineState", fileName = "MineState")]
-    public class MineState : LevelState
+    public class MineState : BuildingLevelState
     {
         private bool isActiveVisited = false;
         
         private Mine mine;
         protected override void OnInit()
         {
-            controls.Level.TryGetComponent(out mine);
-            if (mine == null)
-            {
-                Debug.LogError($"Level: {controls.Level.name} has no <b>Mine</b> Component");
-            }
+            mine = GetComponentInLevel<Mine>();
             mine.Build();
             PlayerUI.Instance.MineUI.SetMinedItems(mine.GetMinedItems());
         }
@@ -28,7 +24,7 @@ namespace GroundScripts.LevelScripts.LevelStates
             PlayerUI.Instance.MineUI.SetMinedItems(mine.GetMinedItems());
         }
 
-        public override void OnVisit()
+        protected override void OnVisit()
         {
             isActiveVisited = true;
             PlayerUI.Instance.MineUI.OnPickUp += PickUp;
@@ -42,7 +38,7 @@ namespace GroundScripts.LevelScripts.LevelStates
             PlayerUI.Instance.MineUI.SetMinedItems(mine.GetMinedItems());
         }
 
-        public override void OnExit()
+        protected override void OnExit()
         {
             isActiveVisited = false;
             PlayerUI.Instance.MineUI.OnPickUp -= PickUp;

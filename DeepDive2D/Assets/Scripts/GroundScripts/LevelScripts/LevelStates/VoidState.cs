@@ -10,12 +10,12 @@ namespace GroundScripts.LevelScripts.LevelStates
 
         }
 
-        public override void OnVisit()
+        protected override void OnVisit()
         {
             
         }
 
-        public override void OnExit()
+        protected override void OnExit()
         {
             
         }

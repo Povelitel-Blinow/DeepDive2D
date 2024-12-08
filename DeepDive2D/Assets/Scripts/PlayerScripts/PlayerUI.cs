@@ -5,6 +5,7 @@ using UI.CargoLoad;
 using UI.DarUI;
 using UI.LazerUI;
 using UI.MineUI;
+using UI.PlavilnyaUI;
 using UI.PlayerInventoryUI;
 using UnityEngine;
 
@@ -23,10 +24,13 @@ namespace PlayerScripts
         [Header("FloorsUI")]
         [SerializeField] private MineUI mineUI;
         public MineUI MineUI => mineUI;
-        [SerializeField] private UnbuiltMineUI unbuiltMineUI;
-        public UnbuiltMineUI UnbuiltMineUI => unbuiltMineUI;
+        [SerializeField] private UnbuiltUI unbuiltUI;
+        public UnbuiltUI UnbuiltUI => unbuiltUI;
         [SerializeField] private LazerUI lazerUI;
         public LazerUI LazerUI => lazerUI;
+        [SerializeField] private PlavilnyaUI plavilnyaUI;
+        public PlavilnyaUI PlavilnyaUI;
+
 
         public static PlayerUI Instance { get; private set; }
         

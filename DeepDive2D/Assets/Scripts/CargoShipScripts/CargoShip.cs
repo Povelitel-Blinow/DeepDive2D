@@ -23,7 +23,7 @@ namespace CargoShipScripts
         private const string FlyAwayAnimation = "CargoShipFlyAway";
 
         public Action<Cargo> OnDrop;
-
+        
         private void Update()
         {
             float distance = (Player.Instance.transform.position - shakePos.position).magnitude;
@@ -35,6 +35,7 @@ namespace CargoShipScripts
                 ? Mathf.Lerp(shakingPeriod.x, shakingPeriod.y, distance / shakingStartDistance) : 1;
             
             CameraShaker.Instance.SetShaking(power, period);
+            
             /*
             if (distance < shakingStartDistance)
                 CameraShaker.Instance.SetShaking(

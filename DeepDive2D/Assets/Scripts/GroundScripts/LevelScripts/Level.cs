@@ -33,12 +33,12 @@ namespace GroundScripts.LevelScripts
 
         public void OnLevelVisit()
         {
-            currentState.OnVisit();
+            currentState.Visit();
         }
         
         public void OnLevelExit()
         {
-            currentState.OnExit();
+            currentState.Exit();
         }
 
         private void ChangeState(LevelState state)
@@ -55,7 +55,7 @@ namespace GroundScripts.LevelScripts
             currentState = Instantiate(state);
             currentState.Init(controls);
             currentState.ChangeState += ChangeState;
-            currentState.OnVisit();
+            currentState.Visit();
             
             if(stateChanged)
                 OnLevelStateFinished?.Invoke();

@@ -11,12 +11,12 @@ namespace GroundScripts.LevelScripts.LevelStates
             
         }
 
-        public override void OnVisit()
+        protected override void OnVisit()
         {
             PlayerUI.Instance.SetMoveUI(true);
         }
 
-        public override void OnExit()
+        protected override void OnExit()
         {
             
         }

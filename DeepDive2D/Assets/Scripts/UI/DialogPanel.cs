@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -23,8 +24,20 @@ namespace UI
 
         public void Show()
         {
-            gameObject.SetActive(true);
-            StartCoroutine(NonClicking());
+            try
+            {
+                //No time to fix
+                gameObject.SetActive(true);
+                StartCoroutine(NonClicking());
+            }
+            catch (Exception e)
+            {
+            }
+        }
+
+        private void OnDestroy()
+        {
+            StopAllCoroutines();
         }
 
         private IEnumerator NonClicking()

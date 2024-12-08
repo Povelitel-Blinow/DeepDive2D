@@ -156,6 +156,7 @@ GameObject:
   - component: {fileID: 4691837313561421505}
   - component: {fileID: 2814421721999973251}
   - component: {fileID: 8629264686785661788}
+  - component: {fileID: 2612638932053736722}
   m_Layer: 7
   m_Name: Cargo
   m_TagString: Untagged
@@ -365,6 +366,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2612638932053736722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2336105676258675114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acb064ad1962b524b95430563190569f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 8629264686785661788}
 --- !u!1 &3625672185094256390
 GameObject:
   m_ObjectHideFlags: 0

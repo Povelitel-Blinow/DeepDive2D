@@ -153,7 +153,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f342bb1af052fcd4ab0b31e4e03c3a24, type: 2}
   - {fileID: 11400000, guid: 65a3712dc0564ee4883e16944bb6e22c, type: 2}
   resourceAddEffect: {fileID: 8260212961536506294, guid: 3b54af389130ed74f9e9227ace186f76, type: 3}
-  regeneration: 0.2
+  currentHp: 0
+  regeneration: 0.5
   regenDelay: 5
   source: {fileID: 490034449799120922}
   volume: 0.5

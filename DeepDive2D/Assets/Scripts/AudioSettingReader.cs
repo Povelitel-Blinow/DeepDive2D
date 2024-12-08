@@ -1,3 +1,4 @@
+using System;
 using UI;
 using UnityEngine;
 
@@ -16,9 +17,21 @@ public class AudioSettingReader : MonoBehaviour
 
     private void ChangeVolume()
     {
+        if (audioSource == null)
+        {
+            SettingsUI.OnUpdate -= ChangeVolume;
+            return;
+        }
+        
         audioSource.volume = startVolume * SettingsUI.volume;
     }
-    
+
+
+    private void OnDestroy()
+    {
+        SettingsUI.OnUpdate -= ChangeVolume;
+    }
+
     private void OnValidate()
     {
         audioSource ??= GetComponent<AudioSource>();

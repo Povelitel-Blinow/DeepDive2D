@@ -1,3 +1,4 @@
+using UI;
 using UnityEngine;
 
 namespace CargoShipScripts
@@ -9,7 +10,7 @@ namespace CargoShipScripts
 
         public void Play()
         {
-            source.PlayOneShot(siren);
+            source.PlayOneShot(siren, SettingsUI.volume);
         }
     }
 }

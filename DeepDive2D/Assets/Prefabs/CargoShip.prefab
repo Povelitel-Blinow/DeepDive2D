@@ -547,6 +547,10 @@ MonoBehaviour:
   animator: {fileID: 8383641460522532557}
   crossFade: 0.2
   cargo: {fileID: 2814421721999973251}
+  shakingPeriod: {x: 0.1, y: 0.2}
+  shakingPower: {x: 0, y: 0.05}
+  shakingStartDistance: 50
+  shakePos: {fileID: 3292529707558385269}
 --- !u!1 &7898439712189394057
 GameObject:
   m_ObjectHideFlags: 0

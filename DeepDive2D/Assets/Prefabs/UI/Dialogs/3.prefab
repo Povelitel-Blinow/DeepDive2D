@@ -90,6 +90,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogPanel: {fileID: 0}
+  nonClickTime: 1
 --- !u!1 &2466062682901194614
 GameObject:
   m_ObjectHideFlags: 0

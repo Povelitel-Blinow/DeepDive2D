@@ -32,8 +32,8 @@ namespace UI.PlayerInventoryUI
 
         private void VoidInfo()
         {
-            nameText.text = "";
-            descriptionText.text = "";
+            nameText.text = "-";
+            descriptionText.text = "Нажмите на ресурс, чтобы посмотреть описание";
         }
 
         private void UpdateUI()

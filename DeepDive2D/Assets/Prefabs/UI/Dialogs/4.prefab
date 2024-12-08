@@ -521,3 +521,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogPanel: {fileID: 0}
+  nonClickTime: 1
